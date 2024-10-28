@@ -57,7 +57,7 @@ namespace Final_Project_for_Studio_2
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Final_Project_for_Studio_2.Properties.Resources.Login_Image;
-            this.pictureBox1.Location = new System.Drawing.Point(-10, -121);
+            this.pictureBox1.Location = new System.Drawing.Point(-10, -125);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(512, 836);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,7 +165,7 @@ namespace Final_Project_for_Studio_2
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelLogin);
             this.Name = "Form1";
-            this.Text = "Login Page";
+            this.Text = "LoginPage";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

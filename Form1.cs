@@ -74,11 +74,15 @@ namespace Final_Project_for_Studio_2
             if (registeredUsers.ContainsKey(enteredEmail) && registeredUsers[enteredEmail] == enteredPassword)
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Invalid email or password. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               
+
+                // Optionally hide the current login form
+                this.Hide();
             }
         }
     }
