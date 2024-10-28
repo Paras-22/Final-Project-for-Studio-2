@@ -1,6 +1,6 @@
 ﻿namespace Final_Project_for_Studio_2
 {
-    partial class Form3
+    partial class Form4
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Form3
+            // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 712);
-            this.Name = "Form3";
-            this.Text = "DashboardPage";
-            this.Load += new System.EventHandler(this.Form3_Load);
+            this.Name = "Form4";
+            this.Text = "PaymentPage";
             this.ResumeLayout(false);
 
         }
