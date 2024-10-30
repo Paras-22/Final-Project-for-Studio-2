@@ -16,5 +16,10 @@ namespace Final_Project_for_Studio_2
         {
             InitializeComponent();
         }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
