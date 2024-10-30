@@ -113,5 +113,8 @@
   <ItemGroup>
     <None Include="Resources\Login Image.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registration page.jfif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

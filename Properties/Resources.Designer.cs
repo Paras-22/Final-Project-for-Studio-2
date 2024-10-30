@@ -73,6 +73,16 @@ namespace Final_Project_for_Studio_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap registration_page {
+            get {
+                object obj = ResourceManager.GetObject("registration page", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Virat {
             get {
                 object obj = ResourceManager.GetObject("Virat", resourceCulture);
