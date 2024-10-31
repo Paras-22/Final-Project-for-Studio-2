@@ -77,7 +77,7 @@ namespace Final_Project_for_Studio_2
                 textBoxEmail.Text = string.Empty;
                 textBoxPassword.Text = string.Empty;
 
-
+                 
             }
         }
 
