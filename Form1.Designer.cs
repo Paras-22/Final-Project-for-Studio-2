@@ -148,6 +148,7 @@ namespace Final_Project_for_Studio_2
             this.button2.TabIndex = 10;
             this.button2.Text = "Create an account";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.buttonAccount_Click);
             // 
             // Form1
             // 

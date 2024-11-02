@@ -35,7 +35,7 @@ namespace Final_Project_for_Studio_2
         private void btnRegister_Click(object sender, EventArgs e)
         {
             // Validation logic for registration
-            if (string.IsNullOrEmpty(textBoxEmail.Text))
+            if (string.IsNullOrEmpty(textBoxName.Text))
             {
                 MessageBox.Show("Please enter your email.");
                 return;

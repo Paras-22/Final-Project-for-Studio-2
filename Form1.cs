@@ -45,6 +45,7 @@ namespace Final_Project_for_Studio_2
             // Capture the entered email and password
             string enteredEmail = textBoxEmail.Text.Trim();
             string enteredPassword = textBoxPassword.Text;
+         
 
             // Check if email is empty and prompt the user if it is
             if (string.IsNullOrWhiteSpace(enteredEmail))
@@ -65,8 +66,10 @@ namespace Final_Project_for_Studio_2
             {
                 // Show success message if login is successful
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Form3 form3 = new Form3();
+                form3.Show();
+                this.Hide();
 
-                
             }
             else
             {
@@ -79,6 +82,8 @@ namespace Final_Project_for_Studio_2
 
                  
             }
+
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -103,6 +108,11 @@ namespace Final_Project_for_Studio_2
         {
         }
 
-
+        private void buttonAccount_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+            this.Hide();
+        }
     }
 }
