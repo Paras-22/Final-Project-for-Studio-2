@@ -39,7 +39,7 @@ namespace Final_Project_for_Studio_2
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelAccount = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonAccount = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,24 +137,25 @@ namespace Final_Project_for_Studio_2
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
-            // button2
+            // buttonAccount
             // 
-            this.button2.BackColor = System.Drawing.Color.DimGray;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(648, 572);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 49);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Create an account";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonAccount.BackColor = System.Drawing.Color.DimGray;
+            this.buttonAccount.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAccount.ForeColor = System.Drawing.Color.White;
+            this.buttonAccount.Location = new System.Drawing.Point(648, 572);
+            this.buttonAccount.Name = "buttonAccount";
+            this.buttonAccount.Size = new System.Drawing.Size(211, 49);
+            this.buttonAccount.TabIndex = 10;
+            this.buttonAccount.Text = "Create an account";
+            this.buttonAccount.UseVisualStyleBackColor = false;
+            this.buttonAccount.Click += new System.EventHandler(this.buttonAccount_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 712);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonAccount);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelAccount);
             this.Controls.Add(this.textBoxPassword);
@@ -184,7 +185,7 @@ namespace Final_Project_for_Studio_2
         private System.Windows.Forms.TextBox textBoxPassword;
         private Label labelAccount;
         private Button button1;
-        private Button button2;
+        private Button buttonAccount;
     }
 }
 
