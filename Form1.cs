@@ -114,5 +114,10 @@ namespace Final_Project_for_Studio_2
             form2.Show();
             this.Hide();
         }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
