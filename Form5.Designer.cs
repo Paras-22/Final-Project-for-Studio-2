@@ -1,4 +1,4 @@
-﻿using System.Security.Policy;
+using System.Security.Policy;
 
 namespace Final_Project_for_Studio_2
 {
