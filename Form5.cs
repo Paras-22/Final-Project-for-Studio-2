@@ -67,5 +67,15 @@ namespace Final_Project_for_Studio_2
         {
             countdownTimer.Start();
         }
+
+        private void pnlActions_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlTrolleyInfo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
