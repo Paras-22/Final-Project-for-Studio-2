@@ -157,13 +157,13 @@ namespace Final_Project_for_Studio_2
             this.tblLayoutPrices.Controls.Add(this.lblDeliveryFee, 0, 0);
             this.tblLayoutPrices.Controls.Add(this.lblSubtotal, 0, 1);
             this.tblLayoutPrices.Controls.Add(this.lblEstimatedTotal, 0, 2);
-            this.tblLayoutPrices.Location = new System.Drawing.Point(350, 60);
+            this.tblLayoutPrices.Location = new System.Drawing.Point(345, 60);
             this.tblLayoutPrices.Name = "tblLayoutPrices";
             this.tblLayoutPrices.RowCount = 3;
             this.tblLayoutPrices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblLayoutPrices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tblLayoutPrices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblLayoutPrices.Size = new System.Drawing.Size(330, 150);
+            this.tblLayoutPrices.Size = new System.Drawing.Size(335, 150);
             this.tblLayoutPrices.TabIndex = 3;
             // 
             // pnlActions
