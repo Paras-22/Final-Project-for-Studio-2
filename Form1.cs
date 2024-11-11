@@ -42,49 +42,40 @@ namespace Final_Project_for_Studio_2
         // This is the event handler for login button click event.
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            // Capture the entered email and password
             string enteredEmail = textBoxEmail.Text.Trim();
             string enteredPassword = textBoxPassword.Text;
-         
 
-            // Check if email is empty and prompt the user if it is
+            // Validate email and password fields
             if (string.IsNullOrWhiteSpace(enteredEmail))
             {
                 MessageBox.Show("Please enter an email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Exit the method if email is empty
+                return;
             }
-
-            // Check if password is empty and prompt the user if it is
             if (string.IsNullOrWhiteSpace(enteredPassword))
             {
                 MessageBox.Show("Please enter a password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Exit the method if password is empty
+                return;
             }
 
-            // Check if the entered email and password match any registered user in the dictionary
-            if (registeredUsers.ContainsKey(enteredEmail) && registeredUsers[enteredEmail] == enteredPassword)
+            // Initialize dbCustomer and read the data for the entered email
+            dbCustomer customerDb = new dbCustomer();
+            bool userExists = customerDb.Read(enteredEmail);
+
+            if (userExists && customerDb.data.Password == enteredPassword)
             {
-                // Show success message if login is successful
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Form3 form3 = new Form3();
                 form3.Show();
                 this.Hide();
-
             }
             else
             {
-                // Show error message if email or password is incorrect
                 MessageBox.Show("Invalid email or password. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                // Clear the email and password text boxes
                 textBoxEmail.Text = string.Empty;
                 textBoxPassword.Text = string.Empty;
-
-                 
             }
-
-           
         }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

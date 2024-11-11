@@ -56,7 +56,6 @@ namespace Final_Project_for_Studio_2
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-            // Capture entered data
             string name = textBoxName.Text.Trim();
             string email = textBoxEmail.Text.Trim();
             string password = textBoxPassword.Text;
@@ -77,16 +76,26 @@ namespace Final_Project_for_Studio_2
                 return;
             }
 
-           
+            // Initialize dbCustomer to save the new user's data
+            dbCustomer customerDb = new dbCustomer();
+            customerDb.data.CustomerName = name;
+            customerDb.data.CustomerEmail = email;
+            customerDb.data.Password = password;
 
-            // Notify the user of a successful registration
-            MessageBox.Show("Registration successful! Please Login.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // Redirect to the login form (Form1) after successful registration
-            Form1 loginForm = new Form1();
-            loginForm.Show();
-            this.Hide();
+            // Attempt to save the new user record
+            if (customerDb.Update(email))
+            {
+                MessageBox.Show("Registration successful! Please Login.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Form1 loginForm = new Form1();
+                loginForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Error during registration: " + customerDb.LastError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
