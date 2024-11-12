@@ -69,6 +69,13 @@ namespace Final_Project_for_Studio_2
                 return;
             }
 
+            // Validate email format (check for '@' character)
+            if (!email.Contains("@"))
+            {
+                MessageBox.Show("Invalid email address. Please enter valid emil address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // Check if passwords match
             if (password != confirmPassword)
             {
@@ -95,6 +102,7 @@ namespace Final_Project_for_Studio_2
                 MessageBox.Show("Error during registration: " + customerDb.LastError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
         private void buttonLogin_Click(object sender, EventArgs e)

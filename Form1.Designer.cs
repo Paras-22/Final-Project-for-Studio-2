@@ -167,6 +167,7 @@ namespace Final_Project_for_Studio_2
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelLogin);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginPage";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
