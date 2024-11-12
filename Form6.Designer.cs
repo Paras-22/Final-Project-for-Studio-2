@@ -18,16 +18,17 @@
             this.dgvPastOrders.Location = new System.Drawing.Point(12, 12);
             this.dgvPastOrders.Name = "dgvPastOrders";
             this.dgvPastOrders.RowHeadersWidth = 62;
-            this.dgvPastOrders.Size = new System.Drawing.Size(760, 400);
+            this.dgvPastOrders.Size = new System.Drawing.Size(978, 594);
             this.dgvPastOrders.TabIndex = 0;
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Navy;
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(12, 420);
+            this.btnBack.Location = new System.Drawing.Point(12, 626);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(100, 30);
+            this.btnBack.Size = new System.Drawing.Size(148, 54);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -35,7 +36,7 @@
             // 
             // Form6
             // 
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(1002, 712);
             this.Controls.Add(this.dgvPastOrders);
             this.Controls.Add(this.btnBack);
             this.Name = "Form6";

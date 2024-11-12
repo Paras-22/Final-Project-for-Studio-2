@@ -77,7 +77,7 @@ namespace Final_Project_for_Studio_2
             // 
             this.lblTrolleyStatus.AutoSize = true;
             this.lblTrolleyStatus.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
-            this.lblTrolleyStatus.Location = new System.Drawing.Point(20, 20);
+            this.lblTrolleyStatus.Location = new System.Drawing.Point(20, 32);
             this.lblTrolleyStatus.Name = "lblTrolleyStatus";
             this.lblTrolleyStatus.Size = new System.Drawing.Size(224, 37);
             this.lblTrolleyStatus.TabIndex = 0;
@@ -89,18 +89,18 @@ namespace Final_Project_for_Studio_2
             this.lstItems.Font = new System.Drawing.Font("Arial", 10F);
             this.lstItems.FormattingEnabled = true;
             this.lstItems.ItemHeight = 23;
-            this.lstItems.Location = new System.Drawing.Point(20, 60);
+            this.lstItems.Location = new System.Drawing.Point(27, 80);
             this.lstItems.Name = "lstItems";
-            this.lstItems.Size = new System.Drawing.Size(300, 140);
+            this.lstItems.Size = new System.Drawing.Size(300, 301);
             this.lstItems.TabIndex = 1;
             // 
             // lblSubtotal
             // 
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Arial", 12F);
-            this.lblSubtotal.Location = new System.Drawing.Point(3, 20);
+            this.lblSubtotal.Location = new System.Drawing.Point(3, 47);
             this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(175, 20);
+            this.lblSubtotal.Size = new System.Drawing.Size(175, 27);
             this.lblSubtotal.TabIndex = 1;
             this.lblSubtotal.Text = "Subtotal: $0.00";
             // 
@@ -110,7 +110,7 @@ namespace Final_Project_for_Studio_2
             this.lblDeliveryFee.Font = new System.Drawing.Font("Arial", 12F);
             this.lblDeliveryFee.Location = new System.Drawing.Point(3, 0);
             this.lblDeliveryFee.Name = "lblDeliveryFee";
-            this.lblDeliveryFee.Size = new System.Drawing.Size(218, 20);
+            this.lblDeliveryFee.Size = new System.Drawing.Size(218, 27);
             this.lblDeliveryFee.TabIndex = 0;
             this.lblDeliveryFee.Text = "Delivery Fee: $0.00";
             // 
@@ -119,9 +119,9 @@ namespace Final_Project_for_Studio_2
             this.lblEstimatedTotal.AutoSize = true;
             this.lblEstimatedTotal.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.lblEstimatedTotal.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblEstimatedTotal.Location = new System.Drawing.Point(3, 40);
+            this.lblEstimatedTotal.Location = new System.Drawing.Point(3, 169);
             this.lblEstimatedTotal.Name = "lblEstimatedTotal";
-            this.lblEstimatedTotal.Size = new System.Drawing.Size(171, 66);
+            this.lblEstimatedTotal.Size = new System.Drawing.Size(242, 66);
             this.lblEstimatedTotal.TabIndex = 2;
             this.lblEstimatedTotal.Text = "Estimated Total: $0.00";
             // 
@@ -130,7 +130,7 @@ namespace Final_Project_for_Studio_2
             this.lblCountdown.AutoSize = true;
             this.lblCountdown.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Italic);
             this.lblCountdown.ForeColor = System.Drawing.Color.Red;
-            this.lblCountdown.Location = new System.Drawing.Point(20, 240);
+            this.lblCountdown.Location = new System.Drawing.Point(36, 440);
             this.lblCountdown.Name = "lblCountdown";
             this.lblCountdown.Size = new System.Drawing.Size(208, 24);
             this.lblCountdown.TabIndex = 2;
@@ -144,27 +144,28 @@ namespace Final_Project_for_Studio_2
             this.pnlTrolleyInfo.Controls.Add(this.lstItems);
             this.pnlTrolleyInfo.Controls.Add(this.lblCountdown);
             this.pnlTrolleyInfo.Controls.Add(this.tblLayoutPrices);
-            this.pnlTrolleyInfo.Location = new System.Drawing.Point(50, 30);
+            this.pnlTrolleyInfo.Location = new System.Drawing.Point(86, 36);
             this.pnlTrolleyInfo.Name = "pnlTrolleyInfo";
-            this.pnlTrolleyInfo.Size = new System.Drawing.Size(700, 300);
+            this.pnlTrolleyInfo.Size = new System.Drawing.Size(842, 501);
             this.pnlTrolleyInfo.TabIndex = 0;
             // 
             // tblLayoutPrices
             // 
             this.tblLayoutPrices.ColumnCount = 2;
-            this.tblLayoutPrices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tblLayoutPrices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tblLayoutPrices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.34328F));
+            this.tblLayoutPrices.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.65672F));
             this.tblLayoutPrices.Controls.Add(this.lblDeliveryFee, 0, 0);
             this.tblLayoutPrices.Controls.Add(this.lblSubtotal, 0, 1);
             this.tblLayoutPrices.Controls.Add(this.lblEstimatedTotal, 0, 2);
-            this.tblLayoutPrices.Location = new System.Drawing.Point(345, 60);
+            this.tblLayoutPrices.Location = new System.Drawing.Point(349, 80);
             this.tblLayoutPrices.Name = "tblLayoutPrices";
             this.tblLayoutPrices.RowCount = 3;
-            this.tblLayoutPrices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblLayoutPrices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblLayoutPrices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblLayoutPrices.Size = new System.Drawing.Size(335, 150);
+            this.tblLayoutPrices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tblLayoutPrices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 122F));
+            this.tblLayoutPrices.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tblLayoutPrices.Size = new System.Drawing.Size(413, 301);
             this.tblLayoutPrices.TabIndex = 3;
+            this.tblLayoutPrices.Paint += new System.Windows.Forms.PaintEventHandler(this.tblLayoutPrices_Paint);
             // 
             // pnlActions
             // 
@@ -172,15 +173,15 @@ namespace Final_Project_for_Studio_2
             this.pnlActions.Controls.Add(this.btnContinueShopping);
             this.pnlActions.Controls.Add(this.btnClearTrolley);
             this.pnlActions.Controls.Add(this.btnCheckout);
-            this.pnlActions.Location = new System.Drawing.Point(50, 360);
+            this.pnlActions.Location = new System.Drawing.Point(120, 588);
             this.pnlActions.Name = "pnlActions";
-            this.pnlActions.Size = new System.Drawing.Size(700, 100);
+            this.pnlActions.Size = new System.Drawing.Size(729, 112);
             this.pnlActions.TabIndex = 1;
             // 
             // Form5
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 550);
+            this.ClientSize = new System.Drawing.Size(1002, 712);
             this.Controls.Add(this.pnlTrolleyInfo);
             this.Controls.Add(this.pnlActions);
             this.Name = "Form5";

@@ -45,7 +45,7 @@ namespace Final_Project_for_Studio_2
             string enteredEmail = textBoxEmail.Text.Trim();
             string enteredPassword = textBoxPassword.Text;
 
-            // Validate email and password fields
+           
             if (string.IsNullOrWhiteSpace(enteredEmail))
             {
                 MessageBox.Show("Please enter an email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
