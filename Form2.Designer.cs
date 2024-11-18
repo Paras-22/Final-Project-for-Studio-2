@@ -104,7 +104,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(635, 584);
+            this.label5.Location = new System.Drawing.Point(641, 578);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(226, 25);
             this.label5.TabIndex = 9;
@@ -124,10 +124,9 @@
             // textBoxConfirmPassword
             // 
             this.textBoxConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxConfirmPassword.Location = new System.Drawing.Point(540, 410);
-            this.textBoxConfirmPassword.Multiline = true;
+            this.textBoxConfirmPassword.Location = new System.Drawing.Point(541, 413);
             this.textBoxConfirmPassword.Name = "textBoxConfirmPassword";
-            this.textBoxConfirmPassword.Size = new System.Drawing.Size(416, 51);
+            this.textBoxConfirmPassword.Size = new System.Drawing.Size(416, 31);
             this.textBoxConfirmPassword.TabIndex = 13;
             this.textBoxConfirmPassword.UseSystemPasswordChar = true;
             this.textBoxConfirmPassword.TextChanged += new System.EventHandler(this.textBoxConfirmPassword_TextChanged);
@@ -136,9 +135,8 @@
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.Location = new System.Drawing.Point(540, 318);
-            this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(416, 45);
+            this.textBoxPassword.Size = new System.Drawing.Size(416, 31);
             this.textBoxPassword.TabIndex = 14;
             this.textBoxPassword.UseSystemPasswordChar = true;
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
@@ -158,7 +156,7 @@
             this.buttonLogin.BackColor = System.Drawing.Color.Silver;
             this.buttonLogin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.White;
-            this.buttonLogin.Location = new System.Drawing.Point(657, 627);
+            this.buttonLogin.Location = new System.Drawing.Point(663, 621);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(160, 49);
             this.buttonLogin.TabIndex = 15;
@@ -192,7 +190,7 @@
             this.buttonRegister.BackColor = System.Drawing.Color.DimGray;
             this.buttonRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRegister.ForeColor = System.Drawing.Color.White;
-            this.buttonRegister.Location = new System.Drawing.Point(636, 497);
+            this.buttonRegister.Location = new System.Drawing.Point(640, 479);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(211, 58);
             this.buttonRegister.TabIndex = 18;
