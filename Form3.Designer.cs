@@ -17,13 +17,12 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // Form3
             // 
-            this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Name = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
-
         }
     }
 }
