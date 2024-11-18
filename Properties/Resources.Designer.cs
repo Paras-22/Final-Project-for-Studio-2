@@ -63,6 +63,16 @@ namespace Final_Project_for_Studio_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cart {
+            get {
+                object obj = ResourceManager.GetObject("cart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Login_Image {
             get {
                 object obj = ResourceManager.GetObject("Login Image", resourceCulture);
@@ -96,6 +106,66 @@ namespace Final_Project_for_Studio_2.Properties {
         internal static System.Drawing.Bitmap M3 {
             get {
                 object obj = ResourceManager.GetObject("M3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outfit1 {
+            get {
+                object obj = ResourceManager.GetObject("outfit1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outfit2 {
+            get {
+                object obj = ResourceManager.GetObject("outfit2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outfit3 {
+            get {
+                object obj = ResourceManager.GetObject("outfit3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outfit4 {
+            get {
+                object obj = ResourceManager.GetObject("outfit4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outfit41 {
+            get {
+                object obj = ResourceManager.GetObject("outfit41", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outfit5 {
+            get {
+                object obj = ResourceManager.GetObject("outfit5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

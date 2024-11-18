@@ -34,7 +34,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxConfirmPassword = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
@@ -43,6 +42,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.buttonRegister = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,17 +109,6 @@
             this.label5.Size = new System.Drawing.Size(226, 25);
             this.label5.TabIndex = 9;
             this.label5.Text = "Already have an account ?";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Final_Project_for_Studio_2.Properties.Resources.registration_page;
-            this.pictureBox1.Location = new System.Drawing.Point(-7, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(483, 705);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // textBoxConfirmPassword
             // 
@@ -208,6 +197,17 @@
             this.label7.Size = new System.Drawing.Size(150, 38);
             this.label7.TabIndex = 19;
             this.label7.Text = "TrendMart";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Final_Project_for_Studio_2.Properties.Resources.registration_page;
+            this.pictureBox1.Location = new System.Drawing.Point(-7, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(483, 705);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form2
             // 
