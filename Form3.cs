@@ -35,23 +35,12 @@ namespace Final_Project_for_Studio_2
             this.Controls.Add(sidebarPanel);
 
             // Sidebar Category Buttons (Adding Individually)
-            Button menButton = CreateSidebarButton("Men");
-            sidebarPanel.Controls.Add(menButton);
-
-            Button womenButton = CreateSidebarButton("Women");
-            sidebarPanel.Controls.Add(womenButton);
-
-            Button kidButton = CreateSidebarButton("Kid");
-            sidebarPanel.Controls.Add(kidButton);
-
-            Button accessoriesButton = CreateSidebarButton("Accessories");
-            sidebarPanel.Controls.Add(accessoriesButton);
-
-            Button allButton = CreateSidebarButton("All");
-            sidebarPanel.Controls.Add(allButton);
-
-            Button contactSupportButton = CreateSidebarButton("Contact Support - EMAIL");
-            sidebarPanel.Controls.Add(contactSupportButton);
+            sidebarPanel.Controls.Add(CreateSidebarButton("Men"));
+            sidebarPanel.Controls.Add(CreateSidebarButton("Women"));
+            sidebarPanel.Controls.Add(CreateSidebarButton("Kid"));
+            sidebarPanel.Controls.Add(CreateSidebarButton("Accessories"));
+            sidebarPanel.Controls.Add(CreateSidebarButton("All"));
+            sidebarPanel.Controls.Add(CreateSidebarButton("Contact Support - EMAIL"));
 
             // Top Navigation Bar with Gradient Background
             Panel topNavBar = new Panel
@@ -82,9 +71,9 @@ namespace Final_Project_for_Studio_2
             Panel newReleasePanel = CreateRoundedPanel(new Point(200, 90), new Size(700, 250), "New Release");
             this.Controls.Add(newReleasePanel);
 
-            // New Release Images
-            PictureBox pictureBox1 = CreateImageBox("C:\\Images\\M2.jpg", new Point(20, 40), new Size(180, 180));
-            PictureBox pictureBox2 = CreateImageBox("C:\\Images\\M3.png", new Point(220, 40), new Size(180, 180));
+            // New Release Images from embedded resources
+            PictureBox pictureBox1 = CreateImageBox(Properties.Resources.M2, new Point(20, 40), new Size(180, 180));
+            PictureBox pictureBox2 = CreateImageBox(Properties.Resources.M3, new Point(220, 40), new Size(180, 180));
             newReleasePanel.Controls.Add(pictureBox1);
             newReleasePanel.Controls.Add(pictureBox2);
 
@@ -92,8 +81,8 @@ namespace Final_Project_for_Studio_2
             Panel pastOrdersPanel = CreateRoundedPanel(new Point(200, 360), new Size(700, 300), "View Past Orders");
             this.Controls.Add(pastOrdersPanel);
 
-            // Past Orders Image
-            PictureBox pastOrdersPictureBox = CreateImageBox("C:\\Images\\M1.jpg", new Point(20, 40), new Size(250, 250));
+            // Past Orders Image from embedded resources
+            PictureBox pastOrdersPictureBox = CreateImageBox(Properties.Resources.M1, new Point(20, 40), new Size(250, 250));
             pastOrdersPanel.Controls.Add(pastOrdersPictureBox);
         }
 
@@ -152,23 +141,17 @@ namespace Final_Project_for_Studio_2
             };
             panel.Paint += (s, e) =>
             {
-                // Shadow effect
-                e.Graphics.DrawRectangle(new Pen(Color.FromArgb(200, 200, 200), 10), new Rectangle(new Point(-5, -5), new Size(panel.Width + 10, panel.Height + 10)));
-
-                // Rounded corners effect
-                e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-                e.Graphics.FillRectangle(new SolidBrush(Color.White), new Rectangle(0, 0, panel.Width, panel.Height));
                 e.Graphics.DrawString(title, new Font("Arial", 14, FontStyle.Bold), Brushes.Black, new Point(10, 10));
             };
             return panel;
         }
 
-        // Helper Method to Create an Image Box
-        private PictureBox CreateImageBox(string imagePath, Point location, Size size)
+        // Helper Method to Create an Image Box using Embedded Resources
+        private PictureBox CreateImageBox(Image image, Point location, Size size)
         {
             PictureBox pictureBox = new PictureBox
             {
-                Image = Image.FromFile(imagePath),
+                Image = image,
                 Location = location,
                 Size = size,
                 SizeMode = PictureBoxSizeMode.StretchImage,
