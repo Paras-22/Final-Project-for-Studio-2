@@ -169,5 +169,23 @@ namespace Final_Project_for_Studio_2
         private void mainContentPanel_Paint(object sender, PaintEventArgs e)
         {
         }
+
+        private void btnMen_Click(object sender, EventArgs e)
+        {
+            // Create an instance of MenCategoryForm1
+            MenCategoryForm1 menCategoryForm = new MenCategoryForm1();
+
+            // Display the form
+            menCategoryForm.Show();
+        }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            Form1 loginForm = new Form1();
+            loginForm.Show();
+            this.Hide();
+
+            
+        }
     }
 }

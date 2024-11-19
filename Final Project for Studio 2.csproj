@@ -117,6 +117,12 @@
     <Compile Include="MenCategoryForm.Designer.cs">
       <DependentUpon>MenCategoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenCategoryForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenCategoryForm1.Designer.cs">
+      <DependentUpon>MenCategoryForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpecialOfferDetailForm.cs">
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenCategoryForm.resx">
       <DependentUpon>MenCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenCategoryForm1.resx">
+      <DependentUpon>MenCategoryForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -211,6 +220,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\outfit41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P3.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S3.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A4.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -38,6 +38,7 @@
         private void InitializeComponent()
         {
             this.sideNavPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnMen = new System.Windows.Forms.Button();
             this.btnWomen = new System.Windows.Forms.Button();
             this.btnKids = new System.Windows.Forms.Button();
@@ -46,11 +47,10 @@
             this.btnViewOrders = new System.Windows.Forms.Button();
             this.mainContentPanel = new System.Windows.Forms.Panel();
             this.topBarPanel = new System.Windows.Forms.Panel();
+            this.buttonLogout = new System.Windows.Forms.Button();
             this.labelTrendMart = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
             this.cartIconPictureBox = new System.Windows.Forms.PictureBox();
-            this.buttonLogout = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.sideNavPanel.SuspendLayout();
             this.topBarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cartIconPictureBox)).BeginInit();
@@ -71,6 +71,17 @@
             this.sideNavPanel.Name = "sideNavPanel";
             this.sideNavPanel.Size = new System.Drawing.Size(200, 777);
             this.sideNavPanel.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 454);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 83);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "View Orders";
             // 
             // btnMen
             // 
@@ -137,6 +148,7 @@
             this.btnViewOrders.Size = new System.Drawing.Size(200, 77);
             this.btnViewOrders.TabIndex = 5;
             this.btnViewOrders.Text = "Men";
+            this.btnViewOrders.Click += new System.EventHandler(this.btnMen_Click);
             // 
             // mainContentPanel
             // 
@@ -161,6 +173,19 @@
             this.topBarPanel.Size = new System.Drawing.Size(1460, 80);
             this.topBarPanel.TabIndex = 2;
             this.topBarPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topBarPanel_Paint);
+            // 
+            // buttonLogout
+            // 
+            this.buttonLogout.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonLogout.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonLogout.Location = new System.Drawing.Point(12, 14);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new System.Drawing.Size(139, 56);
+            this.buttonLogout.TabIndex = 3;
+            this.buttonLogout.Text = "Logout";
+            this.buttonLogout.UseVisualStyleBackColor = false;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // labelTrendMart
             // 
@@ -192,29 +217,6 @@
             this.cartIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cartIconPictureBox.TabIndex = 1;
             this.cartIconPictureBox.TabStop = false;
-            // 
-            // buttonLogout
-            // 
-            this.buttonLogout.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.buttonLogout.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonLogout.Location = new System.Drawing.Point(12, 14);
-            this.buttonLogout.Name = "buttonLogout";
-            this.buttonLogout.Size = new System.Drawing.Size(139, 56);
-            this.buttonLogout.TabIndex = 3;
-            this.buttonLogout.Text = "Logout";
-            this.buttonLogout.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 454);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 83);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "View Orders";
             // 
             // Dashboard1
             // 
