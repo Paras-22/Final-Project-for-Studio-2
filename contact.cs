@@ -1,20 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
-namespace Final_Project_for_Studio_2
+namespace TrendMart
 {
-    public partial class contact : Form
+    public partial class Contact : Form
     {
-        public contact()
+        public Contact()
         {
             InitializeComponent();
+        }
+
+        // Event handler for the "Send Message" button
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            // Example of form submission logic (you can enhance it with real backend functionality)
+            string name = txtName.Text;
+            string email = txtEmail.Text;
+            string phone = txtPhone.Text;
+            string message = txtMessage.Text;
+
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(phone) || string.IsNullOrWhiteSpace(message))
+            {
+                MessageBox.Show("Please fill in all fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            MessageBox.Show($"Thank you, {name}. Your message has been sent successfully!", "Message Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

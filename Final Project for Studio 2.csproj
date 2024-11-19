@@ -137,6 +137,9 @@
     <Compile Include="SpecialOfferDetailForm.Designer.cs">
       <DependentUpon>SpecialOfferDetailForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="contact.resx">
+      <DependentUpon>contact.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard1.resx">
       <DependentUpon>Dashboard1.cs</DependentUpon>
     </EmbeddedResource>
