@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Final_Project_for_Studio_2
 {
     public partial class Dashboard1 : Form
     {
-
         private void LoadProducts()
         {
             // Adjust the form size
@@ -46,13 +40,13 @@ namespace Final_Project_for_Studio_2
 
             // Sample product data for demonstration
             var products = new List<(string Name, decimal Price, string Description, Image Image)>
-    {
-        ("Formal Suit", 129.99m, "Elegant and professional.", Properties.Resources.outfit1),
-        ("Casual Outfit", 199.99m, "Comfortable and stylish.", Properties.Resources.outfit2),
-        ("Puffer Jacket with Jeans", 109.99m, "Stay warm in style.", Properties.Resources.outfit41),
-        ("Bomber Jacket Outfit", 110.99m, "Light and breezy.", Properties.Resources.outfit4),
-        ("Denim Jacket Outfit", 149.99m, "Stylish and attractive.", Properties.Resources.outfit5)
-    };
+            {
+                ("Formal Suit", 129.99m, "Elegant and professional.", Properties.Resources.outfit1),
+                ("Casual Outfit", 199.99m, "Comfortable and stylish.", Properties.Resources.outfit2),
+                ("Puffer Jacket with Jeans", 109.99m, "Stay warm in style.", Properties.Resources.outfit41),
+                ("Bomber Jacket Outfit", 110.99m, "Light and breezy.", Properties.Resources.outfit4),
+                ("Denim Jacket Outfit", 149.99m, "Stylish and attractive.", Properties.Resources.outfit5)
+            };
 
             // Dynamically add product panels
             foreach (var product in products)
@@ -87,11 +81,17 @@ namespace Final_Project_for_Studio_2
                 };
 
                 // Add click event for PictureBox to navigate to product detail form
-                //productPictureBox.Click += (sender, e) =>
-                //{
-                //    ProductDetailForm detailForm = new ProductDetailForm(product.Name, product.Price, product.Description, product.Image);
-                //    detailForm.ShowDialog(); // Open the product detail form as a dialog
-                //};
+                productPictureBox.Click += (sender, e) =>
+                {
+                    // Navigate to SpecialOfferDetailForm with product details
+                    SpecialOfferDetailForm detailForm = new SpecialOfferDetailForm(
+                        product.Name,          // Product name
+                        product.Price,         // Product price
+                        product.Description,   // Product description
+                        product.Image          // Product image
+                    );
+                    detailForm.ShowDialog(); // Open the detail form as a dialog
+                };
 
                 productPanel.Controls.Add(productPictureBox);
 
@@ -152,10 +152,6 @@ namespace Final_Project_for_Studio_2
             }
         }
 
-
-
-
-
         public Dashboard1()
         {
             InitializeComponent();
@@ -164,17 +160,14 @@ namespace Final_Project_for_Studio_2
 
         private void topBarPanel_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void titleLabel_Click(object sender, EventArgs e)
         {
-
         }
 
         private void mainContentPanel_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }
