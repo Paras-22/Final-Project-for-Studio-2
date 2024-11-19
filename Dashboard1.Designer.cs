@@ -217,6 +217,7 @@
             this.cartIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cartIconPictureBox.TabIndex = 1;
             this.cartIconPictureBox.TabStop = false;
+            this.cartIconPictureBox.Click += new System.EventHandler(this.cartIconPictureBox_Click);
             // 
             // Dashboard1
             // 

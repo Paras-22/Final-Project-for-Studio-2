@@ -167,5 +167,13 @@ namespace Final_Project_for_Studio_2
             loginForm.Show();
             this.Hide();
         }
+
+        private void cartIconPictureBox_Click(object sender, EventArgs e)
+        {
+
+            Form5 form5 = new Form5();
+            form5.Show();
+            this.Hide(); 
+        }
     }
 }

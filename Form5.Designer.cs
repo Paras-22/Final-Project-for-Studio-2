@@ -173,9 +173,9 @@ namespace Final_Project_for_Studio_2
             this.pnlActions.Controls.Add(this.btnContinueShopping);
             this.pnlActions.Controls.Add(this.btnClearTrolley);
             this.pnlActions.Controls.Add(this.btnCheckout);
-            this.pnlActions.Location = new System.Drawing.Point(120, 588);
+            this.pnlActions.Location = new System.Drawing.Point(120, 557);
             this.pnlActions.Name = "pnlActions";
-            this.pnlActions.Size = new System.Drawing.Size(729, 112);
+            this.pnlActions.Size = new System.Drawing.Size(729, 94);
             this.pnlActions.TabIndex = 1;
             // 
             // Form5
