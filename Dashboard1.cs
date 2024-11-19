@@ -9,20 +9,17 @@ namespace Final_Project_for_Studio_2
     {
         private void LoadProducts()
         {
-            // Adjust the form size
-            this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.ClientSize = new System.Drawing.Size(980, 768);
 
-            // Create a FlowLayoutPanel to hold product items
             FlowLayoutPanel productsFlowPanel = new FlowLayoutPanel
             {
-                Dock = DockStyle.Fill,        // Fills the main content area
-                AutoScroll = true,           // Enables scrolling
-                Padding = new Padding(20),   // Space around the edges
-                WrapContents = true,         // Allows items to wrap into multiple rows
-                FlowDirection = FlowDirection.LeftToRight // Arrange items left-to-right in rows
+                Dock = DockStyle.Fill,
+                AutoScroll = true,
+                Padding = new Padding(20),
+                WrapContents = true,
+                FlowDirection = FlowDirection.LeftToRight
             };
 
-            // Add a title to indicate "Special Offers"
             Label specialOffersTitle = new Label
             {
                 Text = "🌟 Special Offers 🌟",
@@ -38,7 +35,6 @@ namespace Final_Project_for_Studio_2
             mainContentPanel.Controls.Add(specialOffersTitle);
             mainContentPanel.Controls.Add(productsFlowPanel);
 
-            // Sample product data for demonstration
             var products = new List<(string Name, decimal Price, string Description, Image Image)>
             {
                 ("Formal Suit", 129.99m, "Elegant and professional.", Properties.Resources.outfit1),
@@ -48,54 +44,47 @@ namespace Final_Project_for_Studio_2
                 ("Denim Jacket Outfit", 149.99m, "Stylish and attractive.", Properties.Resources.outfit5)
             };
 
-            // Dynamically add product panels
             foreach (var product in products)
             {
-                // Create a panel for each product
                 Panel productPanel = new Panel
                 {
-                    Width = 220,             // Adjust width for grid alignment
-                    Height = 320,            // Adjust height for uniformity
-                    Margin = new Padding(15), // Space between items
-                    BorderStyle = BorderStyle.FixedSingle // Adds a border for better visibility
+                    Width = 220,
+                    Height = 320,
+                    Margin = new Padding(15),
+                    BorderStyle = BorderStyle.FixedSingle
                 };
 
-                // Add a PictureBox for the product image
                 PictureBox productPictureBox = new PictureBox
                 {
-                    Image = product.Image, // Product image from resources
+                    Image = product.Image,
                     SizeMode = PictureBoxSizeMode.Zoom,
                     Dock = DockStyle.Top,
-                    Height = 180 // Larger image height for better visibility
+                    Height = 180
                 };
 
-                // Add hover effect for the PictureBox
                 productPictureBox.MouseEnter += (sender, e) =>
                 {
-                    productPictureBox.BackColor = Color.LightGray; // Highlight the image on hover
+                    productPictureBox.BackColor = Color.LightGray;
                 };
 
                 productPictureBox.MouseLeave += (sender, e) =>
                 {
-                    productPictureBox.BackColor = Color.Transparent; // Reset background on leave
+                    productPictureBox.BackColor = Color.Transparent;
                 };
 
-                // Add click event for PictureBox to navigate to product detail form
                 productPictureBox.Click += (sender, e) =>
                 {
-                    // Navigate to SpecialOfferDetailForm with product details
                     SpecialOfferDetailForm detailForm = new SpecialOfferDetailForm(
-                        product.Name,          // Product name
-                        product.Price,         // Product price
-                        product.Description,   // Product description
-                        product.Image          // Product image
+                        product.Name,
+                        product.Price,
+                        product.Description,
+                        product.Image
                     );
-                    detailForm.ShowDialog(); // Open the detail form as a dialog
+                    detailForm.ShowDialog();
                 };
 
                 productPanel.Controls.Add(productPictureBox);
 
-                // Add a Label for the product name
                 Label nameLabel = new Label
                 {
                     Text = product.Name,
@@ -103,12 +92,11 @@ namespace Final_Project_for_Studio_2
                     Dock = DockStyle.Top,
                     TextAlign = ContentAlignment.MiddleCenter,
                     AutoSize = false,
-                    Height = 30, // Adjust label height
+                    Height = 30,
                     ForeColor = Color.Black
                 };
                 productPanel.Controls.Add(nameLabel);
 
-                // Add a Label for the product price
                 Label priceLabel = new Label
                 {
                     Text = $"Price: ${product.Price:F2}",
@@ -121,7 +109,6 @@ namespace Final_Project_for_Studio_2
                 };
                 productPanel.Controls.Add(priceLabel);
 
-                // Add a Label for the product description
                 Label descriptionLabel = new Label
                 {
                     Text = product.Description,
@@ -134,7 +121,6 @@ namespace Final_Project_for_Studio_2
                 };
                 productPanel.Controls.Add(descriptionLabel);
 
-                // Add a "Special" label at the bottom
                 Label specialLabel = new Label
                 {
                     Text = "🔥 Limited Time Offer 🔥",
@@ -147,7 +133,6 @@ namespace Final_Project_for_Studio_2
                 };
                 productPanel.Controls.Add(specialLabel);
 
-                // Add the product panel to the FlowLayoutPanel
                 productsFlowPanel.Controls.Add(productPanel);
             }
         }
@@ -172,10 +157,7 @@ namespace Final_Project_for_Studio_2
 
         private void btnMen_Click(object sender, EventArgs e)
         {
-            // Create an instance of MenCategoryForm1
             MenCategoryForm1 menCategoryForm = new MenCategoryForm1();
-
-            // Display the form
             menCategoryForm.Show();
         }
 
@@ -184,8 +166,6 @@ namespace Final_Project_for_Studio_2
             Form1 loginForm = new Form1();
             loginForm.Show();
             this.Hide();
-
-            
         }
     }
 }

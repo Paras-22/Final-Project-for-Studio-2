@@ -211,7 +211,7 @@
             // cartIconPictureBox
             // 
             this.cartIconPictureBox.Image = global::Final_Project_for_Studio_2.Properties.Resources.cart;
-            this.cartIconPictureBox.Location = new System.Drawing.Point(1387, 0);
+            this.cartIconPictureBox.Location = new System.Drawing.Point(1344, 0);
             this.cartIconPictureBox.Name = "cartIconPictureBox";
             this.cartIconPictureBox.Size = new System.Drawing.Size(89, 80);
             this.cartIconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -226,6 +226,7 @@
             this.Controls.Add(this.mainContentPanel);
             this.Controls.Add(this.sideNavPanel);
             this.Controls.Add(this.topBarPanel);
+            this.MaximizeBox = false;
             this.Name = "Dashboard1";
             this.Text = "Dashboard";
             this.sideNavPanel.ResumeLayout(false);

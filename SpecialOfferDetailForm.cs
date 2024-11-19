@@ -12,18 +12,17 @@ namespace Final_Project_for_Studio_2
         private string productDescription;
         private Image productImage;
 
-        // Constructor to initialize product details
+        
         public SpecialOfferDetailForm(string name, decimal price, string description, Image image)
         {
             InitializeComponent();
 
-            // Store product details
+           
             productName = name;
             productPrice = price;
             productDescription = description;
             productImage = image;
 
-            // Display product details
             DisplayProductDetails();
         }
 
@@ -31,23 +30,23 @@ namespace Final_Project_for_Studio_2
         {
             InitializeComponent();
 
-            // Store product details
+           
             productName = name;
             productPrice = price;
             productImage = image;
 
-            // Display product details
+            
             DisplayProductDetails();
         }
 
         private void DisplayProductDetails()
         {
-            // Set product image, name, and price
+           
             productPictureBox.Image = productImage;
             nameLabel.Text = productName;
             priceLabel.Text = $"Price: ${productPrice:F2}";
 
-            // Use a switch statement to determine the description points
+           
             string[] descriptionPoints;
             switch (productName)
             {
@@ -114,16 +113,16 @@ namespace Final_Project_for_Studio_2
                     break;
             }
 
-            // Add the description to the descriptionTextBox
-            descriptionTextBox.Clear(); // Clear any previous content
+            
+            descriptionTextBox.Clear(); 
             foreach (var point in descriptionPoints)
             {
-                descriptionTextBox.AppendText(point + Environment.NewLine); // Append each point with a newline
+                descriptionTextBox.AppendText(point + Environment.NewLine); 
             }
 
-            // Set default values for size and quantity
-            sizeComboBox.SelectedIndex = 0; // Default size
-            quantityNumericUpDown.Value = 1; // Default quantity
+           
+            sizeComboBox.SelectedIndex = 0; 
+            quantityNumericUpDown.Value = 1; 
         }
 
 
@@ -132,7 +131,7 @@ namespace Final_Project_for_Studio_2
             string selectedSize = sizeComboBox.SelectedItem?.ToString() ?? "Unknown";
             int quantity = (int)quantityNumericUpDown.Value;
 
-            // Confirm adding to the cart
+            
             MessageBox.Show(
                 $"Added {quantity} x '{productName}' (Size: {selectedSize}) to your cart!",
                 "Cart Confirmation",
@@ -143,7 +142,31 @@ namespace Final_Project_for_Studio_2
 
         private void BackButton_Click(object sender, EventArgs e)
         {
-            this.Close(); // Close the form and return to the dashboard
+            this.Close(); 
+        }
+
+        private void SpecialOfferDetailForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backButton_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void addToCartButton_Click_1(object sender, EventArgs e)
+        {
+            string selectedSize = sizeComboBox.SelectedItem?.ToString() ?? "Unknown";
+            int quantity = (int)quantityNumericUpDown.Value;
+
+            
+            MessageBox.Show(
+                $"Added {quantity} x '{productName}' (Size: {selectedSize}) to your cart!",
+                "Cart Confirmation",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+                );
         }
     }
 }
