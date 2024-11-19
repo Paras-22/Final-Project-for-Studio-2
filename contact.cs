@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Windows.Forms; // Required for Windows Forms
+using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace Final_Project_for_Studio_2
 {
@@ -12,124 +13,31 @@ namespace Final_Project_for_Studio_2
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            string name = txtName.Text;
-            string email = txtEmail.Text;
-            string phone = txtPhone.Text;
-            string message = txtMessage.Text;
+            MessageBox.Show("Your message has been sent successfully!", "Message Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(message))
+        private void btnShare_Click(object sender, EventArgs e)
+        {
+            // Contact details to share
+            string contactDetails = "TrendMart Contact Details:\n" +
+                                    "Refund: refund@trendmart.co.nz | +64 22 333 4444\n" +
+                                    "Sales: sales@trendmart.co.nz | +64 22 111 3333\n" +
+                                    "Support: support@trendmart.co.nz | +64 21 234 5678";
+
+            // Copy to clipboard
+            Clipboard.SetText(contactDetails);
+
+            // Open social platform links (example: Twitter share link)
+            string twitterUrl = "https://twitter.com/intent/tweet?text=" + Uri.EscapeDataString(contactDetails);
+            DialogResult result = MessageBox.Show("Contact details copied to clipboard. Do you want to share on Twitter?",
+                "Share Contact Details",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Information);
+
+            if (result == DialogResult.Yes)
             {
-                MessageBox.Show("Please fill in all required fields (Name, Email, and Message).", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Process.Start(twitterUrl);
             }
-            else
-            {
-                MessageBox.Show($"Thank you, {name}! Your message has been sent.", "Message Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void lblSubHeader_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblHeader_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void grpContactForm_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEmail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPhone_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPhone_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblMessage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMessage_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlContactDetails_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblRefundTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblRefundEmail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblRefundPhone_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblSalesTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblSalesEmail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblSalesPhone_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblSupportTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblSupportEmail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblSupportPhone_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
