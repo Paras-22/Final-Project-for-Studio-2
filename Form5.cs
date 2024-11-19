@@ -6,15 +6,26 @@ namespace Final_Project_for_Studio_2
     public partial class Form5 : Form
     {
         private Timer countdownTimer;
-        private int countdownTime = 60; // Countdown in seconds
+        private int countdownTime = 60;
         private decimal subtotal = 0.00m;
-        private decimal deliveryFee = 5.00m; // Set delivery fee
+        private decimal deliveryFee = 5.00m;
         private decimal estimatedTotal = 0.00m;
 
         public Form5()
         {
             InitializeComponent();
             InitializeCountdownTimer();
+            UpdateTotal();
+        }
+
+        public void AddToCart(string productName, int quantity, decimal price)
+        {
+            // Add the item to the listbox
+            string cartItem = $"{quantity} x {productName} @ ${price:F2} each";
+            lstItems.Items.Add(cartItem);
+
+            // Update subtotal
+            subtotal += price * quantity;
             UpdateTotal();
         }
 
@@ -41,17 +52,10 @@ namespace Final_Project_for_Studio_2
 
         private void UpdateTotal()
         {
-            subtotal = CalculateSubtotal();
             estimatedTotal = subtotal + deliveryFee;
             lblSubtotal.Text = $"Subtotal: ${subtotal:F2}";
             lblDeliveryFee.Text = $"Delivery Fee: ${deliveryFee:F2}";
             lblEstimatedTotal.Text = $"Estimated Total: ${estimatedTotal:F2}";
-        }
-
-        private decimal CalculateSubtotal()
-        {
-            // Add logic for calculating subtotal here
-            return 0.00m; // Placeholder
         }
 
         private void ResetTrolley()
@@ -68,7 +72,6 @@ namespace Final_Project_for_Studio_2
         private void btnContinueShopping_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Continuing shopping...");
-            // Logic to continue shopping (e.g., navigate to another form or update trolley items)
         }
 
         private void btnClearTrolley_Click(object sender, EventArgs e)
@@ -81,7 +84,6 @@ namespace Final_Project_for_Studio_2
         {
             countdownTimer.Stop();
             MessageBox.Show("Proceeding to checkout...");
-            // Add additional checkout logic here, such as navigating to a payment form
         }
 
         private void Form5_Load(object sender, EventArgs e)
@@ -91,7 +93,6 @@ namespace Final_Project_for_Studio_2
 
         private void tblLayoutPrices_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }

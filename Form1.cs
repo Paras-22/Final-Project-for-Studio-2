@@ -64,8 +64,11 @@ namespace Final_Project_for_Studio_2
             if (userExists && customerDb.data.Password == enteredPassword)
             {
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Form3 form3 = new Form3();
-                form3.Show();
+                Dashboard1 dashboard = new Dashboard1();
+
+                // Show Dashboard1
+                dashboard.Show();
+
                 this.Hide();
             }
             else
