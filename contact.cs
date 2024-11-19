@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace TrendMart
 {
@@ -26,6 +25,7 @@ namespace TrendMart
                 return;
             }
 
+            // Simulate sending the message
             MessageBox.Show($"Thank you, {name}. Your message has been sent successfully!", "Message Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

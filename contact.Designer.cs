@@ -13,6 +13,15 @@
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.TextBox txtMessage;
         private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.Label lblRefundContact;
+        private System.Windows.Forms.Label lblRefundEmail;
+        private System.Windows.Forms.Label lblRefundPhone;
+        private System.Windows.Forms.Label lblSalesContact;
+        private System.Windows.Forms.Label lblSalesEmail;
+        private System.Windows.Forms.Label lblSalesPhone;
+        private System.Windows.Forms.Label lblSupportContact;
+        private System.Windows.Forms.Label lblSupportEmail;
+        private System.Windows.Forms.Label lblSupportPhone;
 
         protected override void Dispose(bool disposing)
         {
@@ -35,6 +44,15 @@
             this.lblMessage = new System.Windows.Forms.Label();
             this.txtMessage = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
+            this.lblRefundContact = new System.Windows.Forms.Label();
+            this.lblRefundEmail = new System.Windows.Forms.Label();
+            this.lblRefundPhone = new System.Windows.Forms.Label();
+            this.lblSalesContact = new System.Windows.Forms.Label();
+            this.lblSalesEmail = new System.Windows.Forms.Label();
+            this.lblSalesPhone = new System.Windows.Forms.Label();
+            this.lblSupportContact = new System.Windows.Forms.Label();
+            this.lblSupportEmail = new System.Windows.Forms.Label();
+            this.lblSupportPhone = new System.Windows.Forms.Label();
 
             this.SuspendLayout();
 
@@ -138,9 +156,111 @@
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
 
             // 
+            // lblRefundContact
+            // 
+            this.lblRefundContact.AutoSize = true;
+            this.lblRefundContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblRefundContact.Location = new System.Drawing.Point(40, 370);
+            this.lblRefundContact.Name = "lblRefundContact";
+            this.lblRefundContact.Size = new System.Drawing.Size(138, 20);
+            this.lblRefundContact.TabIndex = 10;
+            this.lblRefundContact.Text = "Refund Contact:";
+
+            // 
+            // lblRefundEmail
+            // 
+            this.lblRefundEmail.AutoSize = true;
+            this.lblRefundEmail.Location = new System.Drawing.Point(40, 400);
+            this.lblRefundEmail.Name = "lblRefundEmail";
+            this.lblRefundEmail.Size = new System.Drawing.Size(234, 17);
+            this.lblRefundEmail.TabIndex = 11;
+            this.lblRefundEmail.Text = "Email: refund@trendmart.co.nz";
+
+            // 
+            // lblRefundPhone
+            // 
+            this.lblRefundPhone.AutoSize = true;
+            this.lblRefundPhone.Location = new System.Drawing.Point(40, 430);
+            this.lblRefundPhone.Name = "lblRefundPhone";
+            this.lblRefundPhone.Size = new System.Drawing.Size(191, 17);
+            this.lblRefundPhone.TabIndex = 12;
+            this.lblRefundPhone.Text = "Phone: +64 27 765 4321";
+
+            // 
+            // lblSalesContact
+            // 
+            this.lblSalesContact.AutoSize = true;
+            this.lblSalesContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblSalesContact.Location = new System.Drawing.Point(40, 460);
+            this.lblSalesContact.Name = "lblSalesContact";
+            this.lblSalesContact.Size = new System.Drawing.Size(131, 20);
+            this.lblSalesContact.TabIndex = 13;
+            this.lblSalesContact.Text = "Sales Contact:";
+
+            // 
+            // lblSalesEmail
+            // 
+            this.lblSalesEmail.AutoSize = true;
+            this.lblSalesEmail.Location = new System.Drawing.Point(40, 490);
+            this.lblSalesEmail.Name = "lblSalesEmail";
+            this.lblSalesEmail.Size = new System.Drawing.Size(242, 17);
+            this.lblSalesEmail.TabIndex = 14;
+            this.lblSalesEmail.Text = "Email: sales@trendmart.co.nz";
+
+            // 
+            // lblSalesPhone
+            // 
+            this.lblSalesPhone.AutoSize = true;
+            this.lblSalesPhone.Location = new System.Drawing.Point(40, 520);
+            this.lblSalesPhone.Name = "lblSalesPhone";
+            this.lblSalesPhone.Size = new System.Drawing.Size(181, 17);
+            this.lblSalesPhone.TabIndex = 15;
+            this.lblSalesPhone.Text = "Phone: +64 22 111 3333";
+
+            // 
+            // lblSupportContact
+            // 
+            this.lblSupportContact.AutoSize = true;
+            this.lblSupportContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblSupportContact.Location = new System.Drawing.Point(40, 550);
+            this.lblSupportContact.Name = "lblSupportContact";
+            this.lblSupportContact.Size = new System.Drawing.Size(153, 20);
+            this.lblSupportContact.TabIndex = 16;
+            this.lblSupportContact.Text = "Support Contact:";
+
+            // 
+            // lblSupportEmail
+            // 
+            this.lblSupportEmail.AutoSize = true;
+            this.lblSupportEmail.Location = new System.Drawing.Point(40, 580);
+            this.lblSupportEmail.Name = "lblSupportEmail";
+            this.lblSupportEmail.Size = new System.Drawing.Size(246, 17);
+            this.lblSupportEmail.TabIndex = 17;
+            this.lblSupportEmail.Text = "Email: support@trendmart.co.nz";
+
+            // 
+            // lblSupportPhone
+            // 
+            this.lblSupportPhone.AutoSize = true;
+            this.lblSupportPhone.Location = new System.Drawing.Point(40, 610);
+            this.lblSupportPhone.Name = "lblSupportPhone";
+            this.lblSupportPhone.Size = new System.Drawing.Size(181, 17);
+            this.lblSupportPhone.TabIndex = 18;
+            this.lblSupportPhone.Text = "Phone: +64 21 234 5678";
+
+            // 
             // Contact
             // 
-            this.ClientSize = new System.Drawing.Size(400, 370);
+            this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.Controls.Add(this.lblSupportPhone);
+            this.Controls.Add(this.lblSupportEmail);
+            this.Controls.Add(this.lblSupportContact);
+            this.Controls.Add(this.lblSalesPhone);
+            this.Controls.Add(this.lblSalesEmail);
+            this.Controls.Add(this.lblSalesContact);
+            this.Controls.Add(this.lblRefundPhone);
+            this.Controls.Add(this.lblRefundEmail);
+            this.Controls.Add(this.lblRefundContact);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.lblMessage);
