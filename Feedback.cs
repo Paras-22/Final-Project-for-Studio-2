@@ -20,12 +20,12 @@ namespace Final_Project_for_Studio_2
             // Simple validation
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(rating))
             {
-                MessageBox.Show("Please fill in all fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill in all fields before submitting!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                // Store feedback data (you can extend this to save into a database or send via email)
-                MessageBox.Show($"Thank you for your feedback, {name}!\nRating: {rating}\nComments: {comments}",
+                // Here you could send feedback to a server or store it in a database
+                MessageBox.Show($"Thank you, {name}, for your feedback!\nRating: {rating}\nComments: {comments}",
                                  "Feedback Submitted", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Clear fields after submission
@@ -34,6 +34,11 @@ namespace Final_Project_for_Studio_2
                 cmbRating.SelectedIndex = -1;
                 txtComments.Clear();
             }
+        }
+
+        private void lblSubHeader_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
