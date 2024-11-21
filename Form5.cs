@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Final_Project_for_Studio_2
@@ -20,14 +21,13 @@ namespace Final_Project_for_Studio_2
 
         public void AddToCart(string productName, int quantity, decimal price)
         {
-            // Add the item to the listbox
             string cartItem = $"{quantity} x {productName} @ ${price:F2} each";
             lstItems.Items.Add(cartItem);
 
-            // Update subtotal
             subtotal += price * quantity;
             UpdateTotal();
         }
+
 
         private void InitializeCountdownTimer()
         {
@@ -60,7 +60,6 @@ namespace Final_Project_for_Studio_2
 
         private void ResetTrolley()
         {
-            lblTrolleyStatus.Text = "Trolley: No items";
             lstItems.Items.Clear();
             subtotal = 0.00m;
             UpdateTotal();
@@ -71,7 +70,10 @@ namespace Final_Project_for_Studio_2
 
         private void btnContinueShopping_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Continuing shopping...");
+            // Navigate back to the main form
+            Dashboard1 dashboard = new Dashboard1();
+            dashboard.Show();
+            this.Close();
         }
 
         private void btnClearTrolley_Click(object sender, EventArgs e)
@@ -82,15 +84,27 @@ namespace Final_Project_for_Studio_2
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
+            // Stop the countdown timer
             countdownTimer.Stop();
-            MessageBox.Show("Proceeding to checkout...");
+
+            // Collect items from the ListBox
+            List<string> cartItems = new List<string>();
+            foreach (var item in lstItems.Items)
+            {
+                cartItems.Add(item.ToString());
+            }
+
+            // Pass the items to Form4 (payment page)
+            Form4 paymentPage = new Form4(cartItems);
+            paymentPage.Show(); // Open the payment page
+            this.Close(); // Close the checkout page
         }
+
 
         private void Form5_Load(object sender, EventArgs e)
         {
             countdownTimer.Start();
         }
-
         private void tblLayoutPrices_Paint(object sender, PaintEventArgs e)
         {
         }

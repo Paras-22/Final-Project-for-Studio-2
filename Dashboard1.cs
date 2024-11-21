@@ -7,6 +7,15 @@ namespace Final_Project_for_Studio_2
 {
     public partial class Dashboard1 : Form
     {
+        private Form5 checkoutForm; // Shared instance of Form5
+
+        public Dashboard1()
+        {
+            InitializeComponent();
+            checkoutForm = new Form5(); // Initialize shared Form5 instance
+            LoadProducts();
+        }
+
         private void LoadProducts()
         {
             this.ClientSize = new System.Drawing.Size(980, 768);
@@ -74,11 +83,13 @@ namespace Final_Project_for_Studio_2
 
                 productPictureBox.Click += (sender, e) =>
                 {
+                    // Pass shared Form5 to SpecialOfferDetailForm
                     SpecialOfferDetailForm detailForm = new SpecialOfferDetailForm(
                         product.Name,
                         product.Price,
                         product.Description,
-                        product.Image
+                        product.Image,
+                        checkoutForm
                     );
                     detailForm.ShowDialog();
                 };
@@ -121,38 +132,8 @@ namespace Final_Project_for_Studio_2
                 };
                 productPanel.Controls.Add(descriptionLabel);
 
-                Label specialLabel = new Label
-                {
-                    Text = "🔥 Limited Time Offer 🔥",
-                    Font = new Font("Segoe UI", 10, FontStyle.Bold),
-                    Dock = DockStyle.Bottom,
-                    TextAlign = ContentAlignment.MiddleCenter,
-                    AutoSize = false,
-                    Height = 25,
-                    ForeColor = Color.Red
-                };
-                productPanel.Controls.Add(specialLabel);
-
                 productsFlowPanel.Controls.Add(productPanel);
             }
-        }
-
-        public Dashboard1()
-        {
-            InitializeComponent();
-            LoadProducts();
-        }
-
-        private void topBarPanel_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void titleLabel_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void mainContentPanel_Paint(object sender, PaintEventArgs e)
-        {
         }
 
         private void btnMen_Click(object sender, EventArgs e)
@@ -170,10 +151,20 @@ namespace Final_Project_for_Studio_2
 
         private void cartIconPictureBox_Click(object sender, EventArgs e)
         {
+            checkoutForm.Show();
+            this.Hide();
+        }
 
-            Form5 form5 = new Form5();
-            form5.Show();
-            this.Hide(); 
+        private void topBarPanel_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void titleLabel_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void mainContentPanel_Paint(object sender, PaintEventArgs e)
+        {
         }
     }
 }

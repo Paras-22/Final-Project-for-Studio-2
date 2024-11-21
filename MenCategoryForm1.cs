@@ -6,6 +6,7 @@ using System.Windows.Forms;
 namespace Final_Project_for_Studio_2
 {
     public partial class MenCategoryForm1 : Form
+
     {
         public MenCategoryForm1()
         {
@@ -79,7 +80,7 @@ namespace Final_Project_for_Studio_2
                     Dock = DockStyle.Top,
                     Height = 180
                 };
-
+                Form5 checkoutForm = new Form5();
                 productPictureBox.MouseEnter += (sender, e) =>
                 {
                     productPictureBox.BackColor = Color.LightGray;
@@ -96,11 +97,11 @@ namespace Final_Project_for_Studio_2
                         product.Name,
                         product.Price,
                         product.Description,
-                        product.Image
+                        product.Image,
+                        checkoutForm // Pass the checkout form as an argument
                     );
                     detailForm.ShowDialog();
                 };
-
                 productPanel.Controls.Add(productPictureBox);
 
                 Label nameLabel = new Label
@@ -141,6 +142,11 @@ namespace Final_Project_for_Studio_2
 
                 menProductsFlowPanel.Controls.Add(productPanel);
             }
+        }
+
+        private void mainFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

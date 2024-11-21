@@ -39,10 +39,10 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.labelCVC = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonPay = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelTotal = new System.Windows.Forms.Label();
+            this.UpdateTotals = new System.Windows.Forms.Label();
             this.listBoxItems = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
@@ -148,21 +148,23 @@
             this.textBox6.Size = new System.Drawing.Size(166, 44);
             this.textBox6.TabIndex = 13;
             // 
-            // button1
+            // buttonPay
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(40, 597);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 53);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Pay";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonPay.BackColor = System.Drawing.Color.Green;
+            this.buttonPay.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPay.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonPay.Location = new System.Drawing.Point(40, 597);
+            this.buttonPay.Name = "buttonPay";
+            this.buttonPay.Size = new System.Drawing.Size(169, 53);
+            this.buttonPay.TabIndex = 14;
+            this.buttonPay.Text = "Pay";
+            this.buttonPay.UseVisualStyleBackColor = false;
             // 
             // buttonCancel
             // 
-            this.buttonCancel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.buttonCancel.BackColor = System.Drawing.Color.CornflowerBlue;
             this.buttonCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonCancel.Location = new System.Drawing.Point(277, 597);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(169, 53);
@@ -180,16 +182,17 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Total amount";
             // 
-            // labelTotal
+            // UpdateTotals
             // 
-            this.labelTotal.AutoSize = true;
-            this.labelTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.Location = new System.Drawing.Point(854, 602);
-            this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(76, 34);
-            this.labelTotal.TabIndex = 18;
-            this.labelTotal.Text = "$0.0";
+            this.UpdateTotals.AutoSize = true;
+            this.UpdateTotals.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UpdateTotals.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateTotals.Location = new System.Drawing.Point(854, 602);
+            this.UpdateTotals.Name = "UpdateTotals";
+            this.UpdateTotals.Size = new System.Drawing.Size(76, 34);
+            this.UpdateTotals.TabIndex = 18;
+            this.UpdateTotals.Text = "$0.0";
+            this.UpdateTotals.Click += new System.EventHandler(this.UpdateTotals_Click);
             // 
             // listBoxItems
             // 
@@ -206,10 +209,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 712);
             this.Controls.Add(this.listBoxItems);
-            this.Controls.Add(this.labelTotal);
+            this.Controls.Add(this.UpdateTotals);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonPay);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.labelCVC);
             this.Controls.Add(this.textBox3);
@@ -242,10 +245,10 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label labelCVC;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonPay;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.Label UpdateTotals;
         private System.Windows.Forms.ListBox listBoxItems;
     }
 }

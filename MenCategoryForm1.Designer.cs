@@ -36,6 +36,7 @@ namespace Final_Project_for_Studio_2
             this.mainFlowLayoutPanel.Padding = new System.Windows.Forms.Padding(20);
             this.mainFlowLayoutPanel.Size = new System.Drawing.Size(1024, 768);
             this.mainFlowLayoutPanel.TabIndex = 1;
+            this.mainFlowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainFlowLayoutPanel_Paint);
             // 
             // titleLabel
             // 
