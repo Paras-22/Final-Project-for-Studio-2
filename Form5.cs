@@ -94,11 +94,12 @@ namespace Final_Project_for_Studio_2
                 cartItems.Add(item.ToString());
             }
 
-            // Pass the items to Form4 (payment page)
-            Form4 paymentPage = new Form4(cartItems);
+            // Pass the items and the estimated total to Form4 (payment page)
+            Form4 paymentPage = new Form4(cartItems, estimatedTotal);
             paymentPage.Show(); // Open the payment page
             this.Close(); // Close the checkout page
         }
+
 
 
         private void Form5_Load(object sender, EventArgs e)

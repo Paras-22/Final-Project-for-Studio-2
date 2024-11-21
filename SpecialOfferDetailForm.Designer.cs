@@ -185,7 +185,9 @@ namespace Final_Project_for_Studio_2
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.featuresTitleLabel);
             this.Controls.Add(this.featuresLabel);
+            this.MaximizeBox = false;
             this.Name = "SpecialOfferDetailForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Special Offer Details";
             this.Load += new System.EventHandler(this.SpecialOfferDetailForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productPictureBox)).EndInit();

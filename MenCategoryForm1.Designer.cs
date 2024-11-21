@@ -57,6 +57,7 @@ namespace Final_Project_for_Studio_2
             this.Controls.Add(this.mainFlowLayoutPanel);
             this.MaximizeBox = false;
             this.Name = "MenCategoryForm1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Men\'s Category";
             this.mainFlowLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
