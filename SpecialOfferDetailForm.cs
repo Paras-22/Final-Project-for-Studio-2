@@ -168,5 +168,10 @@ namespace Final_Project_for_Studio_2
                 MessageBoxIcon.Information
                 );
         }
+
+        private void featuresLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

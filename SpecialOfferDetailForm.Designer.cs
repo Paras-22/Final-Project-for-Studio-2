@@ -169,6 +169,7 @@ namespace Final_Project_for_Studio_2
             this.featuresLabel.TabIndex = 10;
             this.featuresLabel.Text = "- Stylish and comfortable\n- Made from high-quality materials\n- Perfect for any oc" +
     "casion";
+            this.featuresLabel.Click += new System.EventHandler(this.featuresLabel_Click);
             // 
             // SpecialOfferDetailForm
             // 
