@@ -16,7 +16,10 @@ namespace Final_Project_for_Studio_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Feedback());
+
+            Application.Run(new Form1());
+
+
         }
     }
 }
