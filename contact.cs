@@ -39,5 +39,10 @@ namespace Final_Project_for_Studio_2
                 Process.Start(twitterUrl);
             }
         }
+
+        private void grpContactForm_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

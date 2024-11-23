@@ -112,6 +112,7 @@ namespace Final_Project_for_Studio_2
             this.grpContactForm.TabIndex = 2;
             this.grpContactForm.TabStop = false;
             this.grpContactForm.Text = "Send us a message";
+            this.grpContactForm.Enter += new System.EventHandler(this.grpContactForm_Enter);
             // 
             // lblName
             // 

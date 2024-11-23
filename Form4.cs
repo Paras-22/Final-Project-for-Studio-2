@@ -26,7 +26,7 @@ namespace Final_Project_for_Studio_2
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(750, 550);
+            this.Size = new Size(780, 625);
 
         }
 

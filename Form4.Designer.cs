@@ -44,6 +44,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.UpdateTotals = new System.Windows.Forms.Label();
             this.listBoxItems = new System.Windows.Forms.ListBox();
+            this.labelDeliveryCharges = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.labelAddress = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // labelPayment
@@ -158,7 +162,7 @@
             this.buttonPay.BackColor = System.Drawing.Color.Green;
             this.buttonPay.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPay.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonPay.Location = new System.Drawing.Point(91, 619);
+            this.buttonPay.Location = new System.Drawing.Point(91, 731);
             this.buttonPay.Name = "buttonPay";
             this.buttonPay.Size = new System.Drawing.Size(169, 63);
             this.buttonPay.TabIndex = 14;
@@ -171,7 +175,7 @@
             this.buttonCancel.BackColor = System.Drawing.Color.CornflowerBlue;
             this.buttonCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonCancel.Location = new System.Drawing.Point(328, 619);
+            this.buttonCancel.Location = new System.Drawing.Point(328, 731);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(169, 63);
             this.buttonCancel.TabIndex = 16;
@@ -183,7 +187,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(687, 628);
+            this.label1.Location = new System.Drawing.Point(678, 746);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 32);
             this.label1.TabIndex = 17;
@@ -193,7 +197,7 @@
             // 
             this.UpdateTotals.AutoSize = true;
             this.UpdateTotals.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateTotals.Location = new System.Drawing.Point(911, 628);
+            this.UpdateTotals.Location = new System.Drawing.Point(902, 746);
             this.UpdateTotals.Name = "UpdateTotals";
             this.UpdateTotals.Size = new System.Drawing.Size(74, 32);
             this.UpdateTotals.TabIndex = 18;
@@ -210,12 +214,53 @@
             this.listBoxItems.Size = new System.Drawing.Size(349, 444);
             this.listBoxItems.TabIndex = 19;
             // 
+            // labelDeliveryCharges
+            // 
+            this.labelDeliveryCharges.AutoSize = true;
+            this.labelDeliveryCharges.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDeliveryCharges.Location = new System.Drawing.Point(701, 647);
+            this.labelDeliveryCharges.Name = "labelDeliveryCharges";
+            this.labelDeliveryCharges.Size = new System.Drawing.Size(263, 32);
+            this.labelDeliveryCharges.TabIndex = 20;
+            this.labelDeliveryCharges.Text = "Delivery Charges :  $5";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(91, 647);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(406, 47);
+            this.textBox4.TabIndex = 21;
+            // 
+            // labelAddress
+            // 
+            this.labelAddress.AutoSize = true;
+            this.labelAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddress.Location = new System.Drawing.Point(87, 599);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(154, 25);
+            this.labelAddress.TabIndex = 22;
+            this.labelAddress.Text = "Home Address";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(664, 712);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(364, 5);
+            this.panel1.TabIndex = 23;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(1074, 694);
+            this.ClientSize = new System.Drawing.Size(1109, 864);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.labelAddress);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.labelDeliveryCharges);
             this.Controls.Add(this.listBoxItems);
             this.Controls.Add(this.UpdateTotals);
             this.Controls.Add(this.label1);
@@ -260,5 +305,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label UpdateTotals;
         private System.Windows.Forms.ListBox listBoxItems;
+        private System.Windows.Forms.Label labelDeliveryCharges;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label labelAddress;
+        private System.Windows.Forms.Panel panel1;
     }
 }
