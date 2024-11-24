@@ -66,10 +66,11 @@ namespace Final_Project_for_Studio_2
                 MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Dashboard1 dashboard = new Dashboard1();
 
-                // Show Dashboard1
-                dashboard.Show();
 
+
+                dashboard.Show();
                 this.Hide();
+                // Show Dashboard1
             }
             else
             {

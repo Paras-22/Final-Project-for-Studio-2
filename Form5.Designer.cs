@@ -175,7 +175,7 @@ namespace Final_Project_for_Studio_2
             this.pnlActions.Controls.Add(this.btnCheckout);
             this.pnlActions.Location = new System.Drawing.Point(120, 557);
             this.pnlActions.Name = "pnlActions";
-            this.pnlActions.Size = new System.Drawing.Size(729, 94);
+            this.pnlActions.Size = new System.Drawing.Size(729, 84);
             this.pnlActions.TabIndex = 1;
             // 
             // Form5
@@ -184,6 +184,7 @@ namespace Final_Project_for_Studio_2
             this.ClientSize = new System.Drawing.Size(1002, 712);
             this.Controls.Add(this.pnlTrolleyInfo);
             this.Controls.Add(this.pnlActions);
+            this.MaximizeBox = false;
             this.Name = "Form5";
             this.Text = "Shopping Cart";
             this.Load += new System.EventHandler(this.Form5_Load);

@@ -45,7 +45,7 @@
             this.UpdateTotals = new System.Windows.Forms.Label();
             this.listBoxItems = new System.Windows.Forms.ListBox();
             this.labelDeliveryCharges = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.labelAddress = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
@@ -131,7 +131,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(91, 413);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
@@ -224,14 +224,14 @@
             this.labelDeliveryCharges.TabIndex = 20;
             this.labelDeliveryCharges.Text = "Delivery Charges :  $5";
             // 
-            // textBox4
+            // textBoxAddress
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(91, 647);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(406, 47);
-            this.textBox4.TabIndex = 21;
+            this.textBoxAddress.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAddress.Location = new System.Drawing.Point(91, 647);
+            this.textBoxAddress.Multiline = true;
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(406, 47);
+            this.textBoxAddress.TabIndex = 21;
             // 
             // labelAddress
             // 
@@ -259,7 +259,7 @@
             this.ClientSize = new System.Drawing.Size(1109, 864);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.labelAddress);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxAddress);
             this.Controls.Add(this.labelDeliveryCharges);
             this.Controls.Add(this.listBoxItems);
             this.Controls.Add(this.UpdateTotals);
@@ -306,7 +306,7 @@
         private System.Windows.Forms.Label UpdateTotals;
         private System.Windows.Forms.ListBox listBoxItems;
         private System.Windows.Forms.Label labelDeliveryCharges;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Label labelAddress;
         private System.Windows.Forms.Panel panel1;
     }

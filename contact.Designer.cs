@@ -5,9 +5,6 @@ namespace Final_Project_for_Studio_2
     partial class Contact
     {
         private System.ComponentModel.IContainer components = null;
-
-        // Controls
-        private Label lblHeader;
         private Label lblSubHeader;
         private GroupBox grpContactForm;
         private Label lblName;
@@ -49,7 +46,7 @@ namespace Final_Project_for_Studio_2
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblHeader = new System.Windows.Forms.Label();
+            System.Windows.Forms.Label lblHeader;
             this.lblSubHeader = new System.Windows.Forms.Label();
             this.grpContactForm = new System.Windows.Forms.GroupBox();
             this.lblName = new System.Windows.Forms.Label();
@@ -71,24 +68,28 @@ namespace Final_Project_for_Studio_2
             this.lblSupportTitle = new System.Windows.Forms.Label();
             this.lblSupportEmail = new System.Windows.Forms.Label();
             this.lblSupportPhone = new System.Windows.Forms.Label();
+            lblHeader = new System.Windows.Forms.Label();
             this.grpContactForm.SuspendLayout();
             this.grpContactDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblHeader
             // 
-            this.lblHeader.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
-            this.lblHeader.Location = new System.Drawing.Point(362, 20);
-            this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(300, 40);
-            this.lblHeader.TabIndex = 0;
-            this.lblHeader.Text = "Contact Us";
-            this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblHeader.BackColor = System.Drawing.SystemColors.Control;
+            lblHeader.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
+            lblHeader.ForeColor = System.Drawing.SystemColors.Highlight;
+            lblHeader.Location = new System.Drawing.Point(379, 30);
+            lblHeader.Name = "lblHeader";
+            lblHeader.Size = new System.Drawing.Size(300, 40);
+            lblHeader.TabIndex = 0;
+            lblHeader.Text = "Contact Us";
+            lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblSubHeader
             // 
             this.lblSubHeader.Font = new System.Drawing.Font("Arial", 12F);
-            this.lblSubHeader.Location = new System.Drawing.Point(129, 72);
+            this.lblSubHeader.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.lblSubHeader.Location = new System.Drawing.Point(157, 70);
             this.lblSubHeader.Name = "lblSubHeader";
             this.lblSubHeader.Size = new System.Drawing.Size(717, 30);
             this.lblSubHeader.TabIndex = 1;
@@ -97,6 +98,7 @@ namespace Final_Project_for_Studio_2
             // 
             // grpContactForm
             // 
+            this.grpContactForm.BackColor = System.Drawing.Color.AliceBlue;
             this.grpContactForm.Controls.Add(this.lblName);
             this.grpContactForm.Controls.Add(this.txtName);
             this.grpContactForm.Controls.Add(this.lblEmail);
@@ -106,9 +108,10 @@ namespace Final_Project_for_Studio_2
             this.grpContactForm.Controls.Add(this.lblMessage);
             this.grpContactForm.Controls.Add(this.txtMessage);
             this.grpContactForm.Controls.Add(this.btnSend);
-            this.grpContactForm.Location = new System.Drawing.Point(50, 120);
+            this.grpContactForm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpContactForm.Location = new System.Drawing.Point(79, 116);
             this.grpContactForm.Name = "grpContactForm";
-            this.grpContactForm.Size = new System.Drawing.Size(900, 350);
+            this.grpContactForm.Size = new System.Drawing.Size(862, 535);
             this.grpContactForm.TabIndex = 2;
             this.grpContactForm.TabStop = false;
             this.grpContactForm.Text = "Send us a message";
@@ -116,76 +119,82 @@ namespace Final_Project_for_Studio_2
             // 
             // lblName
             // 
-            this.lblName.Location = new System.Drawing.Point(20, 30);
+            this.lblName.Location = new System.Drawing.Point(91, 77);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(100, 23);
+            this.lblName.Size = new System.Drawing.Size(100, 38);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name:";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(120, 30);
+            this.txtName.Location = new System.Drawing.Point(237, 77);
+            this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(300, 26);
+            this.txtName.Size = new System.Drawing.Size(300, 38);
             this.txtName.TabIndex = 1;
             // 
             // lblEmail
             // 
-            this.lblEmail.Location = new System.Drawing.Point(20, 80);
+            this.lblEmail.Location = new System.Drawing.Point(91, 153);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(100, 23);
+            this.lblEmail.Size = new System.Drawing.Size(100, 38);
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Email:";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(120, 80);
+            this.txtEmail.Location = new System.Drawing.Point(237, 153);
+            this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(300, 26);
+            this.txtEmail.Size = new System.Drawing.Size(300, 38);
             this.txtEmail.TabIndex = 3;
             // 
             // lblPhone
             // 
-            this.lblPhone.Location = new System.Drawing.Point(20, 130);
+            this.lblPhone.Location = new System.Drawing.Point(90, 225);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(100, 23);
+            this.lblPhone.Size = new System.Drawing.Size(100, 38);
             this.lblPhone.TabIndex = 4;
             this.lblPhone.Text = "Phone:";
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(120, 130);
+            this.txtPhone.Location = new System.Drawing.Point(237, 225);
+            this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(300, 26);
+            this.txtPhone.Size = new System.Drawing.Size(300, 38);
             this.txtPhone.TabIndex = 5;
             // 
             // lblMessage
             // 
-            this.lblMessage.Location = new System.Drawing.Point(20, 180);
+            this.lblMessage.Location = new System.Drawing.Point(91, 293);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(100, 23);
+            this.lblMessage.Size = new System.Drawing.Size(129, 33);
             this.lblMessage.TabIndex = 6;
             this.lblMessage.Text = "Message:";
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(120, 180);
+            this.txtMessage.Location = new System.Drawing.Point(237, 293);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(600, 80);
+            this.txtMessage.Size = new System.Drawing.Size(600, 142);
             this.txtMessage.TabIndex = 7;
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(120, 280);
+            this.btnSend.BackColor = System.Drawing.Color.Silver;
+            this.btnSend.Location = new System.Drawing.Point(237, 467);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(100, 30);
+            this.btnSend.Size = new System.Drawing.Size(134, 48);
             this.btnSend.TabIndex = 8;
             this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = false;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // grpContactDetails
             // 
+            this.grpContactDetails.BackColor = System.Drawing.Color.AliceBlue;
             this.grpContactDetails.Controls.Add(this.lblRefundTitle);
             this.grpContactDetails.Controls.Add(this.lblRefundEmail);
             this.grpContactDetails.Controls.Add(this.lblRefundPhone);
@@ -195,9 +204,10 @@ namespace Final_Project_for_Studio_2
             this.grpContactDetails.Controls.Add(this.lblSupportTitle);
             this.grpContactDetails.Controls.Add(this.lblSupportEmail);
             this.grpContactDetails.Controls.Add(this.lblSupportPhone);
-            this.grpContactDetails.Location = new System.Drawing.Point(50, 500);
+            this.grpContactDetails.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpContactDetails.Location = new System.Drawing.Point(79, 657);
             this.grpContactDetails.Name = "grpContactDetails";
-            this.grpContactDetails.Size = new System.Drawing.Size(900, 150);
+            this.grpContactDetails.Size = new System.Drawing.Size(862, 150);
             this.grpContactDetails.TabIndex = 3;
             this.grpContactDetails.TabStop = false;
             this.grpContactDetails.Text = "Contact Information";
@@ -265,7 +275,7 @@ namespace Final_Project_for_Studio_2
             // 
             this.lblSupportEmail.Location = new System.Drawing.Point(620, 60);
             this.lblSupportEmail.Name = "lblSupportEmail";
-            this.lblSupportEmail.Size = new System.Drawing.Size(254, 23);
+            this.lblSupportEmail.Size = new System.Drawing.Size(254, 30);
             this.lblSupportEmail.TabIndex = 7;
             this.lblSupportEmail.Text = "Email: support@trendmart.co.nz";
             // 
@@ -279,14 +289,16 @@ namespace Final_Project_for_Studio_2
             // 
             // Contact
             // 
-            this.ClientSize = new System.Drawing.Size(1024, 768);
-            this.Controls.Add(this.lblHeader);
+            this.ClientSize = new System.Drawing.Size(1067, 869);
+            this.Controls.Add(lblHeader);
             this.Controls.Add(this.lblSubHeader);
             this.Controls.Add(this.grpContactForm);
             this.Controls.Add(this.grpContactDetails);
+            this.MaximizeBox = false;
             this.Name = "Contact";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contact Us - TrendMart";
+            this.Load += new System.EventHandler(this.Contact_Load);
             this.grpContactForm.ResumeLayout(false);
             this.grpContactForm.PerformLayout();
             this.grpContactDetails.ResumeLayout(false);

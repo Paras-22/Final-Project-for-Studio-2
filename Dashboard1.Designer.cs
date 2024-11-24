@@ -8,7 +8,7 @@
         private System.Windows.Forms.Panel mainContentPanel;
         private System.Windows.Forms.Panel topBarPanel;
         private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.Button btnMen;
+        private System.Windows.Forms.Button btnFeedback;
         private System.Windows.Forms.Button btnWomen;
         private System.Windows.Forms.Button btnKids;
         private System.Windows.Forms.Button btnOthers;
@@ -39,7 +39,7 @@
         {
             this.sideNavPanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnMen = new System.Windows.Forms.Button();
+            this.btnFeedback = new System.Windows.Forms.Button();
             this.btnWomen = new System.Windows.Forms.Button();
             this.btnKids = new System.Windows.Forms.Button();
             this.btnOthers = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@
             // 
             this.sideNavPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.sideNavPanel.Controls.Add(this.button1);
-            this.sideNavPanel.Controls.Add(this.btnMen);
+            this.sideNavPanel.Controls.Add(this.btnFeedback);
             this.sideNavPanel.Controls.Add(this.btnWomen);
             this.sideNavPanel.Controls.Add(this.btnKids);
             this.sideNavPanel.Controls.Add(this.btnOthers);
@@ -83,16 +83,17 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "View Orders";
             // 
-            // btnMen
+            // btnFeedback
             // 
-            this.btnMen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMen.Location = new System.Drawing.Point(0, 371);
-            this.btnMen.Name = "btnMen";
-            this.btnMen.Size = new System.Drawing.Size(200, 83);
-            this.btnMen.TabIndex = 0;
-            this.btnMen.Text = "Feedback";
+            this.btnFeedback.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFeedback.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFeedback.Location = new System.Drawing.Point(0, 371);
+            this.btnFeedback.Name = "btnFeedback";
+            this.btnFeedback.Size = new System.Drawing.Size(200, 83);
+            this.btnFeedback.TabIndex = 0;
+            this.btnFeedback.Text = "Feedback";
+            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
             // 
             // btnWomen
             // 
@@ -104,6 +105,7 @@
             this.btnWomen.Size = new System.Drawing.Size(200, 74);
             this.btnWomen.TabIndex = 1;
             this.btnWomen.Text = "Contact us";
+            this.btnWomen.Click += new System.EventHandler(this.btnContactus_Click);
             // 
             // btnKids
             // 

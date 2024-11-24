@@ -166,5 +166,24 @@ namespace Final_Project_for_Studio_2
         private void mainContentPanel_Paint(object sender, PaintEventArgs e)
         {
         }
+
+        private void btnContactus_Click(object sender, EventArgs e)
+        {
+            // Create an instance of the Contact Us form
+            Contact contactForm = new Contact();
+
+            // Show the Contact Us form
+            contactForm.Show();
+        }
+
+        private void btnFeedback_Click(object sender, EventArgs e)
+        {
+            // Create an instance of the Feedback form
+            Feedback feedbackForm = new Feedback();
+
+            // Show the Feedback form
+            feedbackForm.Show();
+        }
+
     }
 }

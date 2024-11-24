@@ -62,6 +62,7 @@ namespace Final_Project_for_Studio_2
             this.nameLabel.Size = new System.Drawing.Size(400, 40);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nameLabel.Click += new System.EventHandler(this.nameLabel_Click);
             // 
             // descriptionTitleLabel
             // 
