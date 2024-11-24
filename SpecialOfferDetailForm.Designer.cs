@@ -94,6 +94,7 @@ namespace Final_Project_for_Studio_2
             this.priceLabel.Size = new System.Drawing.Size(400, 40);
             this.priceLabel.TabIndex = 4;
             this.priceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.priceLabel.Click += new System.EventHandler(this.priceLabel_Click);
             // 
             // sizeComboBox
             // 

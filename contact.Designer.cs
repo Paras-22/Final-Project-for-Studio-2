@@ -1,4 +1,4 @@
-﻿using System.Windows.Forms; // Required for Windows Forms
+﻿using System.Windows.Forms; 
 
 namespace Final_Project_for_Studio_2
 {

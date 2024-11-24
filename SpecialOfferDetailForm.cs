@@ -286,5 +286,10 @@ namespace Final_Project_for_Studio_2
         {
 
         }
+
+        private void priceLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
