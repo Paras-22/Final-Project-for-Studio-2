@@ -21,6 +21,13 @@ namespace Final_Project_for_Studio_2
 
         public void AddToCart(string productName, int quantity, decimal price)
         {
+            if (lstItems.Items.Count == 0)
+            {
+                lstItems.Items.Add("Your Order:");
+                lstItems.Items.Add("============");
+                lstItems.Items.Add("");
+            }  
+
             string cartItem = $"{quantity} x {productName} @ ${price:F2} each";
             lstItems.Items.Add(cartItem);
 
@@ -70,10 +77,9 @@ namespace Final_Project_for_Studio_2
 
         private void btnContinueShopping_Click(object sender, EventArgs e)
         {
-            // Navigate back to the main form
-            Dashboard1 dashboard = new Dashboard1();
-            dashboard.Show();
-            this.Close();
+           
+            this.Hide();
+            Application.OpenForms["Dashboard1"].Show();
         }
 
         private void btnClearTrolley_Click(object sender, EventArgs e)

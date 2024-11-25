@@ -22,8 +22,8 @@ namespace Final_Project_for_Studio_2
 
 
 
-            listBoxItems.Items.Add("Your Order:");
-            listBoxItems.Items.Add(new string('-', 20)); // Adds a separator line for clarity
+           
+            listBoxItems.Items.Add("");// Adds a separator line for clarity
 
             // Add cart items to the ListBox
             foreach (var item in cartItems)
@@ -52,7 +52,7 @@ namespace Final_Project_for_Studio_2
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(780, 625);
+            this.Size = new Size(850, 650);
 
             // Initialize placeholders
             SetPlaceholder(textBox2, placeholderText);
