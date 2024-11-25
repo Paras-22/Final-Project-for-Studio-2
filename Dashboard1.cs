@@ -185,5 +185,10 @@ namespace Final_Project_for_Studio_2
             feedbackForm.Show();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form3 altDashboard = new Form3();
+            altDashboard.Show();
+        }
     }
 }
