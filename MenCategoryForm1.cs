@@ -6,11 +6,14 @@ using System.Windows.Forms;
 namespace Final_Project_for_Studio_2
 {
     public partial class MenCategoryForm1 : Form
-
     {
-        public MenCategoryForm1()
+        private Form5 checkoutForm; // Shared Form5 instance
+
+        // Constructor accepts the shared Form5 instance
+        public MenCategoryForm1(Form5 sharedCheckoutForm)
         {
             InitializeComponent();
+            checkoutForm = sharedCheckoutForm; // Assign the shared instance
             LoadMenCategoryProducts();
         }
 
@@ -80,7 +83,7 @@ namespace Final_Project_for_Studio_2
                     Dock = DockStyle.Top,
                     Height = 180
                 };
-                Form5 checkoutForm = new Form5();
+
                 productPictureBox.MouseEnter += (sender, e) =>
                 {
                     productPictureBox.BackColor = Color.LightGray;
@@ -93,15 +96,17 @@ namespace Final_Project_for_Studio_2
 
                 productPictureBox.Click += (sender, e) =>
                 {
+                    // Use the shared Form5 instance
                     SpecialOfferDetailForm detailForm = new SpecialOfferDetailForm(
                         product.Name,
                         product.Price,
                         product.Description,
                         product.Image,
-                        checkoutForm // Pass the checkout form as an argument
+                        checkoutForm
                     );
                     detailForm.ShowDialog();
                 };
+
                 productPanel.Controls.Add(productPictureBox);
 
                 Label nameLabel = new Label
@@ -146,7 +151,6 @@ namespace Final_Project_for_Studio_2
 
         private void mainFlowLayoutPanel_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }
