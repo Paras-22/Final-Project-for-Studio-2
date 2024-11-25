@@ -11,6 +11,7 @@ namespace Final_Project_for_Studio_2
         private string placeholderText = "MM/YY";
         private string cvcPlaceholderText = "Ex - 232";
         private string cardPlaceholderText = "Enter 16-digit card number";
+
         public Form4(List<string> cartItems, decimal totalAmount)
         {
             InitializeComponent();
@@ -19,6 +20,11 @@ namespace Final_Project_for_Studio_2
             // Display the total amount
             UpdateTotals.Text = $"${totalAmount:F2}";
 
+
+
+            listBoxItems.Items.Add("Your Order:");
+            listBoxItems.Items.Add(new string('-', 20)); // Adds a separator line for clarity
+
             // Add cart items to the ListBox
             foreach (var item in cartItems)
             {
@@ -26,97 +32,42 @@ namespace Final_Project_for_Studio_2
             }
         }
 
-        private void SetPlaceholder()
+        private void SetPlaceholder(TextBox textBox, string placeholder)
         {
-            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            if (string.IsNullOrWhiteSpace(textBox.Text) || textBox.Text == placeholder)
             {
-                textBox2.Text = placeholderText;
-                textBox2.ForeColor = Color.Gray; // Change text color to indicate placeholder
+                textBox.Text = placeholder;
+                textBox.ForeColor = Color.Gray;
             }
         }
 
-        // GotFocus event handler for textBox2
-        private void textBox2_GotFocus(object sender, EventArgs e)
+        private void ClearPlaceholder(TextBox textBox, string placeholder)
         {
-            if (textBox2.Text == placeholderText)
+            if (textBox.Text == placeholder)
             {
-                textBox2.Text = string.Empty; // Clear placeholder
-                textBox2.ForeColor = Color.Black; // Change text color to default
-            }
-        }
-
-        // LostFocus event handler for textBox2
-        private void textBox2_LostFocus(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(textBox2.Text))
-            {
-                SetPlaceholder(); // Restore placeholder if the field is empty
+                textBox.Text = string.Empty;
+                textBox.ForeColor = Color.Black;
             }
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
             this.Size = new Size(780, 625);
-            SetPlaceholder();
-            SetCvcPlaceholder();
-            SetCardPlaceholder();
 
-        }
+            // Initialize placeholders
+            SetPlaceholder(textBox2, placeholderText);
+            SetPlaceholder(textBox3, cardPlaceholderText);
+            SetPlaceholder(textBox6, cvcPlaceholderText);
 
-        private void SetCardPlaceholder()
-        {
-            if (string.IsNullOrWhiteSpace(textBox3.Text))
-            {
-                textBox3.Text = cardPlaceholderText;
-                textBox3.ForeColor = Color.Gray; // Change text color to indicate placeholder
-            }
-        }
+            // Attach event handlers
+            textBox2.GotFocus += (s, ev) => ClearPlaceholder(textBox2, placeholderText);
+            textBox2.LostFocus += (s, ev) => SetPlaceholder(textBox2, placeholderText);
 
-        // GotFocus event handler for textBox3
-        private void textBox3_GotFocus(object sender, EventArgs e)
-        {
-            if (textBox3.Text == cardPlaceholderText)
-            {
-                textBox3.Text = string.Empty; // Clear placeholder
-                textBox3.ForeColor = Color.Black; // Change text color to default
-            }
-        }
+            textBox3.GotFocus += (s, ev) => ClearPlaceholder(textBox3, cardPlaceholderText);
+            textBox3.LostFocus += (s, ev) => SetPlaceholder(textBox3, cardPlaceholderText);
 
-        // LostFocus event handler for textBox3
-        private void textBox3_LostFocus(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(textBox3.Text))
-            {
-                SetCardPlaceholder(); // Restore placeholder if the field is empty
-            }
-        }
-
-        private void SetCvcPlaceholder()
-        {
-            if (string.IsNullOrWhiteSpace(textBox6.Text))
-            {
-                textBox6.Text = cvcPlaceholderText;
-                textBox6.ForeColor = Color.Gray; // Change text color to indicate placeholder
-            }
-        }
-
-        // GotFocus event handler for textBox6
-        private void textBox6_GotFocus(object sender, EventArgs e)
-        {
-            if (textBox6.Text == cvcPlaceholderText)
-            {
-                textBox6.Text = string.Empty; // Clear placeholder
-                textBox6.ForeColor = Color.Black; // Change text color to default
-            }
-        }
-
-        // LostFocus event handler for textBox6
-        private void textBox6_LostFocus(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(textBox6.Text))
-            {
-                SetCvcPlaceholder(); // Restore placeholder if the field is empty
-            }
+            textBox6.GotFocus += (s, ev) => ClearPlaceholder(textBox6, cvcPlaceholderText);
+            textBox6.LostFocus += (s, ev) => SetPlaceholder(textBox6, cvcPlaceholderText);
         }
 
         private void buttonPay_Click(object sender, EventArgs e)
@@ -153,19 +104,6 @@ namespace Final_Project_for_Studio_2
                 return;
             }
 
-            // Assuming the TextBox for home address is named "buttonPay"
-
-            if (string.IsNullOrWhiteSpace(textBoxAddress.Text))
-            {
-                MessageBox.Show("Please enter a valid home address. Avoid using special characters or leaving it empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxAddress.Focus();
-                return;
-            }
-
-            // Method to validate home address
-           
-            
-
             // If all fields are valid, proceed with payment
             MessageBox.Show(
                 $"Payment of {UpdateTotals.Text} successful!",
@@ -176,20 +114,14 @@ namespace Final_Project_for_Studio_2
 
             Dashboard1 dashboard = new Dashboard1();
             dashboard.Show();
-
-           
             this.Close();
         }
 
-        
-
-        // Validate Card Number (16 digits)
         private bool IsCardNumberValid(string cardNumber)
         {
             return cardNumber.Length == 16 && long.TryParse(cardNumber, out _);
         }
 
-        // Validate Expiry Date (MM/YY format)
         private bool IsExpiryDateValid(string expiryDate)
         {
             if (!expiryDate.Contains("/")) return false;
@@ -203,39 +135,28 @@ namespace Final_Project_for_Studio_2
             return true;
         }
 
-        // Validate CVC (3 digits)
         private bool IsCvcValid(string cvc)
         {
             return cvc.Length == 3 && int.TryParse(cvc, out _);
         }
 
-        private void UpdateTotals_Click(object sender, EventArgs e)
-        {
-        }
-
         private void buttonCancel_Click(object sender, EventArgs e)
         {
-            // Show a confirmation dialog
             var result = MessageBox.Show("Are you sure you want to cancel the payment and return to the dashboard?",
                                          "Cancel Payment",
                                          MessageBoxButtons.YesNo,
                                          MessageBoxIcon.Question);
 
-            // If the user clicks "Yes"
             if (result == DialogResult.Yes)
             {
-                // Open the Dashboard form
                 Dashboard1 dashboard = new Dashboard1();
                 dashboard.Show();
-
-                // Close the current form (optional)
                 this.Close();
             }
         }
 
+        private void UpdateTotals_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
-
-
-    
-

@@ -112,6 +112,7 @@ namespace Final_Project_for_Studio_2
             this.textBoxPassword.Location = new System.Drawing.Point(548, 336);
             this.textBoxPassword.Multiline = true;
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(416, 48);
             this.textBoxPassword.TabIndex = 6;
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
