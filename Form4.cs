@@ -64,6 +64,19 @@ namespace Final_Project_for_Studio_2
                 return;
             }
 
+            // Assuming the TextBox for home address is named "buttonPay"
+
+            if (string.IsNullOrWhiteSpace(textBoxAddress.Text))
+            {
+                MessageBox.Show("Please enter a valid home address. Avoid using special characters or leaving it empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                buttonPay.Focus();
+                return;
+            }
+
+            // Method to validate home address
+           
+            
+
             // If all fields are valid, proceed with payment
             MessageBox.Show(
                 $"Payment of {UpdateTotals.Text} successful!",
