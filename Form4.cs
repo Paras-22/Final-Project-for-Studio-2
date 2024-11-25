@@ -8,6 +8,7 @@ namespace Final_Project_for_Studio_2
     public partial class Form4 : Form
     {
         private decimal totalAmount;
+        private string placeholderText = "MM/YY";
 
         public Form4(List<string> cartItems, decimal totalAmount)
         {
@@ -24,9 +25,38 @@ namespace Final_Project_for_Studio_2
             }
         }
 
+        private void SetPlaceholder()
+        {
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                textBox2.Text = placeholderText;
+                textBox2.ForeColor = Color.Gray; // Change text color to indicate placeholder
+            }
+        }
+
+        // GotFocus event handler for textBox2
+        private void textBox2_GotFocus(object sender, EventArgs e)
+        {
+            if (textBox2.Text == placeholderText)
+            {
+                textBox2.Text = string.Empty; // Clear placeholder
+                textBox2.ForeColor = Color.Black; // Change text color to default
+            }
+        }
+
+        // LostFocus event handler for textBox2
+        private void textBox2_LostFocus(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            {
+                SetPlaceholder(); // Restore placeholder if the field is empty
+            }
+        }
+
         private void Form4_Load(object sender, EventArgs e)
         {
             this.Size = new Size(780, 625);
+            SetPlaceholder();
 
         }
 
@@ -69,7 +99,7 @@ namespace Final_Project_for_Studio_2
             if (string.IsNullOrWhiteSpace(textBoxAddress.Text))
             {
                 MessageBox.Show("Please enter a valid home address. Avoid using special characters or leaving it empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                buttonPay.Focus();
+                textBoxAddress.Focus();
                 return;
             }
 
