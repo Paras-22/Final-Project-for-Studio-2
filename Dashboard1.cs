@@ -138,7 +138,7 @@ namespace Final_Project_for_Studio_2
 
         private void btnMen_Click(object sender, EventArgs e)
         {
-            MenCategoryForm1 menCategoryForm = new MenCategoryForm1();
+            MenCategoryForm1 menCategoryForm = new MenCategoryForm1(checkoutForm);
             menCategoryForm.Show();
         }
 
