@@ -189,7 +189,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(772, 741);
+            this.label1.Location = new System.Drawing.Point(808, 741);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 32);
             this.label1.TabIndex = 17;
@@ -199,7 +199,7 @@
             // 
             this.UpdateTotals.AutoSize = true;
             this.UpdateTotals.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateTotals.Location = new System.Drawing.Point(996, 741);
+            this.UpdateTotals.Location = new System.Drawing.Point(1032, 741);
             this.UpdateTotals.Name = "UpdateTotals";
             this.UpdateTotals.Size = new System.Drawing.Size(74, 32);
             this.UpdateTotals.TabIndex = 18;
@@ -213,14 +213,14 @@
             this.listBoxItems.ItemHeight = 23;
             this.listBoxItems.Location = new System.Drawing.Point(748, 137);
             this.listBoxItems.Name = "listBoxItems";
-            this.listBoxItems.Size = new System.Drawing.Size(386, 464);
+            this.listBoxItems.Size = new System.Drawing.Size(395, 464);
             this.listBoxItems.TabIndex = 19;
             // 
             // labelDeliveryCharges
             // 
             this.labelDeliveryCharges.AutoSize = true;
             this.labelDeliveryCharges.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeliveryCharges.Location = new System.Drawing.Point(784, 637);
+            this.labelDeliveryCharges.Location = new System.Drawing.Point(820, 637);
             this.labelDeliveryCharges.Name = "labelDeliveryCharges";
             this.labelDeliveryCharges.Size = new System.Drawing.Size(263, 32);
             this.labelDeliveryCharges.TabIndex = 20;
@@ -248,7 +248,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(757, 708);
+            this.panel1.Location = new System.Drawing.Point(779, 706);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(364, 5);
             this.panel1.TabIndex = 23;
