@@ -138,12 +138,6 @@
     <Compile Include="SpecialOfferDetailForm.Designer.cs">
       <DependentUpon>SpecialOfferDetailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="womencategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="womencategory.Designer.cs">
-      <DependentUpon>womencategory.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="contact.resx">
       <DependentUpon>contact.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,9 +177,6 @@
     </Compile>
     <EmbeddedResource Include="SpecialOfferDetailForm.resx">
       <DependentUpon>SpecialOfferDetailForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="womencategory.resx">
-      <DependentUpon>womencategory.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
