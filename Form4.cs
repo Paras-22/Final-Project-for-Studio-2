@@ -10,7 +10,7 @@ namespace Final_Project_for_Studio_2
         private decimal totalAmount;
         private string placeholderText = "MM/YY";
         private string cvcPlaceholderText = "Ex - 232";
-
+        private string cardPlaceholderText = "Enter 16-digit card number";
         public Form4(List<string> cartItems, decimal totalAmount)
         {
             InitializeComponent();
@@ -59,7 +59,36 @@ namespace Final_Project_for_Studio_2
             this.Size = new Size(780, 625);
             SetPlaceholder();
             SetCvcPlaceholder();
+            SetCardPlaceholder();
 
+        }
+
+        private void SetCardPlaceholder()
+        {
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                textBox3.Text = cardPlaceholderText;
+                textBox3.ForeColor = Color.Gray; // Change text color to indicate placeholder
+            }
+        }
+
+        // GotFocus event handler for textBox3
+        private void textBox3_GotFocus(object sender, EventArgs e)
+        {
+            if (textBox3.Text == cardPlaceholderText)
+            {
+                textBox3.Text = string.Empty; // Clear placeholder
+                textBox3.ForeColor = Color.Black; // Change text color to default
+            }
+        }
+
+        // LostFocus event handler for textBox3
+        private void textBox3_LostFocus(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox3.Text))
+            {
+                SetCardPlaceholder(); // Restore placeholder if the field is empty
+            }
         }
 
         private void SetCvcPlaceholder()
