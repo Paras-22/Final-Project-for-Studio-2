@@ -9,6 +9,7 @@ namespace Final_Project_for_Studio_2
     {
         private decimal totalAmount;
         private string placeholderText = "MM/YY";
+        private string cvcPlaceholderText = "Ex - 232";
 
         public Form4(List<string> cartItems, decimal totalAmount)
         {
@@ -57,7 +58,36 @@ namespace Final_Project_for_Studio_2
         {
             this.Size = new Size(780, 625);
             SetPlaceholder();
+            SetCvcPlaceholder();
 
+        }
+
+        private void SetCvcPlaceholder()
+        {
+            if (string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                textBox6.Text = cvcPlaceholderText;
+                textBox6.ForeColor = Color.Gray; // Change text color to indicate placeholder
+            }
+        }
+
+        // GotFocus event handler for textBox6
+        private void textBox6_GotFocus(object sender, EventArgs e)
+        {
+            if (textBox6.Text == cvcPlaceholderText)
+            {
+                textBox6.Text = string.Empty; // Clear placeholder
+                textBox6.ForeColor = Color.Black; // Change text color to default
+            }
+        }
+
+        // LostFocus event handler for textBox6
+        private void textBox6_LostFocus(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox6.Text))
+            {
+                SetCvcPlaceholder(); // Restore placeholder if the field is empty
+            }
         }
 
         private void buttonPay_Click(object sender, EventArgs e)
